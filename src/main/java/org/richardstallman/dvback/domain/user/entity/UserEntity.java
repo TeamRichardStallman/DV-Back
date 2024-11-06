@@ -20,7 +20,7 @@ public class UserEntity {
   @SequenceGenerator(name = "user_seq", sequenceName = "user_id_seq", allocationSize = 1)
   private Long id;
 
-  @Column(nullable = false, unique = true)
+  @Column(unique = true)
   private String socialId;
 
   @Column(nullable = false)
@@ -79,5 +79,10 @@ public class UserEntity {
         birthdate
         //            this.job
         );
+  }
+
+  public UserEntity deactivate() {
+    return new UserEntity(
+        this.id, null, "withdrawn@example.com", "탈퇴한 회원", "탈퇴한 회원", null, true, null, null);
   }
 }

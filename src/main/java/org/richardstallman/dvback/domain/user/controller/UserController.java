@@ -57,4 +57,11 @@ public class UserController {
     final UserResponseDto userResponseDto = userService.getUserInfo(userId);
     return ResponseEntity.ok(DvApiResponse.of(userResponseDto));
   }
+
+  @DeleteMapping("/leave")
+  public ResponseEntity<DvApiResponse<UserResponseDto>> deactivateUser(
+      @AuthenticationPrincipal Long userId) {
+    UserResponseDto userResponseDto = userService.deactivateUser(userId);
+    return ResponseEntity.ok(DvApiResponse.of(userResponseDto));
+  }
 }

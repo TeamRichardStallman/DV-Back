@@ -201,4 +201,55 @@ public class UserControllerTest {
                 fieldWithPath("data.gender").description("성별"),
                 fieldWithPath("data.birthdate").description("생년월일"))));
   }
+
+  @Test
+  @WithMockUser
+  @DisplayName("유저 탈퇴 - 성공")
+  void deactivate_user_success() throws Exception {
+    // given
+    Long userId = 1L;
+    UserResponseDto userResponseDto =
+        new UserResponseDto(
+            userId, null, "withdrawn@example.com", "탈퇴한 회원", "탈퇴한 회원", null, true, null, null);
+
+    when(userService.deactivateUser(userId)).thenReturn(userResponseDto);
+
+    // Mocked Cookie for authorization
+    String accessToken = jwtUtil.generateAccessToken(userId);
+    MockCookie authCookie = new MockCookie("access_token", accessToken);
+
+    // when
+    ResultActions resultActions =
+        mockMvc.perform(
+            delete("/user/leave").contentType(MediaType.APPLICATION_JSON).cookie(authCookie));
+
+    // then
+    resultActions
+        .andExpect(status().isOk())
+        .andExpect(jsonPath("$.code").value(200))
+        .andExpect(jsonPath("$.message").value("SUCCESS"))
+        .andExpect(jsonPath("$.data.userId").value(userId))
+        .andExpect(jsonPath("$.data.nickname").value("탈퇴한 회원"))
+        .andExpect(jsonPath("$.data.email").value("withdrawn@example.com"))
+        .andExpect(jsonPath("$.data.leave").value(true));
+
+    // restdocs
+    resultActions.andDo(
+        document(
+            "유저 탈퇴 - 성공",
+            preprocessRequest(prettyPrint()),
+            preprocessResponse(prettyPrint()),
+            responseFields(
+                fieldWithPath("code").description("응답 코드"),
+                fieldWithPath("message").description("응답 메시지"),
+                fieldWithPath("data.userId").description("유저 ID"),
+                fieldWithPath("data.socialId").description("소셜 ID"),
+                fieldWithPath("data.email").description("탈퇴된 유저의 이메일"),
+                fieldWithPath("data.name").description("탈퇴된 유저 이름"),
+                fieldWithPath("data.nickname").description("탈퇴된 유저 닉네임"),
+                fieldWithPath("data.s3ProfileImageUrl").description("프로필 이미지 URL (탈퇴 후 null)"),
+                fieldWithPath("data.leave").description("탈퇴 여부"),
+                fieldWithPath("data.gender").description("성별 (탈퇴 후 null)"),
+                fieldWithPath("data.birthdate").description("생년월일 (탈퇴 후 null)"))));
+  }
 }

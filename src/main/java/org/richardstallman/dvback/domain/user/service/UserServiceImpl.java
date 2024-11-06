@@ -49,6 +49,25 @@ public class UserServiceImpl implements UserService {
     return userConverter.fromDomainToDto(userDomain);
   }
 
+  @Override
+  public UserResponseDto deactivateUser(Long userId) {
+    UserDomain user = findUserById(userId);
+    UserEntity userEntity = userConverter.fromDomainToEntity(user);
+    UserEntity deactivatedUser = userEntity.deactivate();
+    userRepository.save(userConverter.fromEntityToDomain(deactivatedUser));
+
+    return new UserResponseDto(
+        deactivatedUser.getId(),
+        deactivatedUser.getSocialId(),
+        deactivatedUser.getEmail(),
+        deactivatedUser.getName(),
+        deactivatedUser.getNickname(),
+        deactivatedUser.getS3ProfileImageUrl(),
+        deactivatedUser.getLeave(),
+        deactivatedUser.getGender(),
+        deactivatedUser.getBirthdate());
+  }
+
   private UserDomain findUserById(Long userId) {
     return userRepository
         .findById(userId)

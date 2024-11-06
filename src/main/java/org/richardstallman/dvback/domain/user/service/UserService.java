@@ -8,4 +8,6 @@ public interface UserService {
   UserResponseDto updateUserInfo(Long userId, UserRequestDto userRequestDto);
 
   UserResponseDto getUserInfo(Long userId);
+
+  UserResponseDto deactivateUser(Long userId);
 }

@@ -148,6 +148,17 @@ include::{snippets}/로그아웃 - 성공/http-request.adoc[]
 
 include::{snippets}/로그아웃 - 성공/http-response.adoc[]
 
+=== 유저 탈퇴 - 성공
+
+==== 요청
+
+include::{snippets}/유저 탈퇴 - 성공/http-request.adoc[]
+
+==== 응답
+
+include::{snippets}/유저 탈퇴 - 성공/http-response.adoc[]
+include::{snippets}/유저 탈퇴 - 성공/response-fields.adoc[]
+
 
 
 == 파일
