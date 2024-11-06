@@ -27,6 +27,7 @@ public class DataInitializer implements CommandLineRunner {
         jobRepository.save(
             JobDomain.builder()
                 .jobName(jobs.getJobName())
+                .jobNameKorean(jobs.getJobNameKorean())
                 .jobDescription(jobs.getJobDescription())
                 .build());
       }
