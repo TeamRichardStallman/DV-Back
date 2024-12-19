@@ -1,0 +1,97 @@
+spring:
+  datasource:
+    url: jdbc:h2:~/test;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH
+    username: sa
+    password:
+    hikari:
+      maximum-pool-size: 10   # Pool에서 동시에 사용할 수 있는 최대 Connection 수
+      minimum-idle: 2        # 최소 유지할 Connection 수
+      idle-timeout: 10000    # 사용하지 않는 Connection 반환 시간 (밀리초)
+      max-lifetime: 30000
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  config:
+    import: classpath:/properties/test/initial_data.yml, optional:file:.env[.properties], classpath:/properties/test/welcome_coupon.yml
+  data:
+    redis:
+      host: ${REDIS_HOST}
+      port: 6379
+    web:
+      pageable:
+        default-page-size: 3
+  security:
+    oauth2:
+      client:
+        registration:
+          kakao:
+            client-id: ${KAKAO_CLIENT_ID}
+            client-secret: ${KAKAO_CLIENT_SECRET}
+            redirect-uri: ${KAKAO_REDIRECT_URI}
+            authorization-grant-type: authorization_code
+            client-authentication-method: client_secret_post
+            client-name: kakao
+            scope: account_email
+        provider:
+          kakao:
+            authorization-uri: https://kauth.kakao.com/oauth/authorize
+            token-uri: https://kauth.kakao.com/oauth/token
+            user-info-uri: https://kapi.kakao.com/v2/user/me
+            user-name-attribute: id
+    media-types:
+      html: text/html
+  web:
+    resources:
+      static-locations: classpath:/static/
+  main:
+    allow-bean-definition-overriding: true
+
+python:
+  server:
+    url: ${PYTHON_SERVER_URL}
+    question-path: /questions-test
+    evaluation-path: /evaluation-test
+
+cloud:
+  aws:
+    s3:
+      bucket: ktb-8-dev-bucket
+      urlDurationMinutes: 10
+      baseFilePath: files/
+    credentials:
+      access-key: ${ACCESS_KEY}
+      secret-key: ${SECRET_KEY}
+
+app:
+  jwt:
+    secret-key: "your-very-long-secret-key-that-is-at-least-64-characters-long-to-meet-512-bit-requirement"
+    access-expiration: 3600000
+    refresh-expiration: 604800000
+  properties:
+    mainDomain: localhost
+    frontendDomain: http://localhost:3000
+    secure: true
+    cookie:
+      sameSite: "None"
+cors:
+  allowed-origins:
+    list:
+      ${ALLOWED_ORIGINS}
+
+springdoc:
+  restdocs:
+    auto: true
+  api-docs:
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+
+firebase:
+  config-path: classpath:/firebase/ikdk-55b6f-firebase-adminsdk-xwlmi-6121debed2.json
+
+security:
+  excluded-paths: /docs/**,favicon.ico,/evaluation/completion,/question/completion,/answer/evaluations,/user/validate-username,/ping-pong,/actuator/prometheus

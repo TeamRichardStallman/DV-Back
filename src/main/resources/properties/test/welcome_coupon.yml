@@ -1,0 +1,18 @@
+coupon:
+  welcomeCoupons:
+    - chargeAmount: 1
+      couponName: "웰컴 쿠폰 - 실전 채팅 면접"
+      interviewMode: "REAL"
+      interviewAssetType: "CHAT"
+    - chargeAmount: 1
+      couponName: "웰컴 쿠폰 - 실전 음성 면접"
+      interviewMode: "REAL"
+      interviewAssetType: "VOICE"
+    - chargeAmount: 5
+      couponName: "웰컴 쿠폰 - 모의 채팅 면접"
+      interviewMode: "GENERAL"
+      interviewAssetType: "CHAT"
+    - chargeAmount: 3
+      couponName: "웰컴 쿠폰 - 모의 음성 면접"
+      interviewMode: "GENERAL"
+      interviewAssetType: "VOICE"

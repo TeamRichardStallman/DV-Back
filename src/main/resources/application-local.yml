@@ -1,0 +1,104 @@
+spring:
+  datasource:
+    url: ${POSTGRESQL_URL}
+    username: ${POSTGRESQL_USERNAME}
+    password: ${POSTGRESQL_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  config:
+    import: classpath:/properties/local/initial_data.yml, optional:file:.env[.properties], classpath:/properties/local/welcome_coupon.yml
+  data:
+    redis:
+      host: ${REDIS_HOST}
+      port: 6379
+    web:
+      pageable:
+        default-page-size: 3
+  security:
+    oauth2:
+      client:
+        registration:
+          kakao:
+            client-id: ${KAKAO_CLIENT_ID}
+            client-secret: ${KAKAO_CLIENT_SECRET}
+            redirect-uri: ${KAKAO_REDIRECT_URI}
+            authorization-grant-type: authorization_code
+            client-authentication-method: client_secret_post
+            client-name: kakao
+            scope: account_email
+        provider:
+          kakao:
+            authorization-uri: https://kauth.kakao.com/oauth/authorize
+            token-uri: https://kauth.kakao.com/oauth/token
+            user-info-uri: https://kapi.kakao.com/v2/user/me
+            user-name-attribute: id
+  main:
+    allow-bean-definition-overriding: true
+  mvc:
+    favicon:
+      enabled: false
+    media-types:
+      html: text/html
+  web:
+    resources:
+      static-locations: classpath:/static/
+
+python:
+  server:
+    url: ${PYTHON_SERVER_URL}
+    question-path: /questions
+    evaluation-path: /evaluation
+
+cloud:
+  aws:
+    s3:
+      bucket: ktb-8-dev-bucket
+      urlDurationMinutes: 10
+      baseFilePath: files/
+    credentials:
+      access-key: ${ACCESS_KEY}
+      secret-key: ${SECRET_KEY}
+
+app:
+  jwt:
+    secret-key: ${JWT_SECRET_KEY}
+    access-expiration: 3600000
+    refresh-expiration: 604800000
+  properties:
+    mainDomain: ${MAIN_DOMAIN}
+    frontendDomain: ${FRONT_DOMAIN}
+    secure: true
+    cookie:
+      sameSite: "None"
+cors:
+  allowed-origins:
+    list:
+      ${ALLOWED_ORIGINS}
+
+management:
+  endpoints:
+    prometheus:
+      enabled: true
+    web:
+      exposure:
+        include: prometheus
+
+logging:
+  level:
+    root: INFO
+    org.springframework: INFO # 로그 레벨 설정
+  file:
+    name: /var/log/spring.log  # 로그 파일 이름
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss} %level %logger --- %msg%n" # 로그 파일 출력 포맷
+
+firebase:
+  config-path: firebase/ikdk-55b6f-firebase-adminsdk-xwlmi-6121debed2.json
+
+security:
+  excluded-paths: /docs/**,favicon.ico,/evaluation/completion,/question/completion,/answer/evaluations,/user/validate-username,/ping-pong,/actuator/prometheus

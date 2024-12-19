@@ -1,0 +1,10 @@
+job:
+  jobs:
+    - jobName: "BACK_END"
+      jobDescription: "백엔드 직무입니다."
+    - jobName: "FRONT_END"
+      jobDescription: "프론트엔드 직무입니다."
+    - jobName: "INFRA"
+      jobDescription: "인프라 직무입니다."
+    - jobName: "AI"
+      jobDescription: "인공지능 직무입니다."

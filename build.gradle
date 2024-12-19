@@ -1,0 +1,169 @@
+buildscript {
+    ext {
+        restdocsApiSpecVersion = '0.18.2'
+    }
+}
+
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.3.4'
+    id 'io.spring.dependency-management' version '1.1.6'
+    id 'com.diffplug.spotless' version '6.19.0'
+    id 'com.epages.restdocs-api-spec' version "${restdocsApiSpecVersion}"
+    id 'org.hidetake.swagger.generator' version '2.18.2'
+}
+
+group = 'org.richardstallman'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+openapi3 {
+    servers = [
+            { url = "http://devterview.com:8080"},
+            { url = "http://localhost:8080" },
+            { url = "http://dev-api.devterview.com:8080"},
+            { url = "http://dev-api.devterview.com"}
+    ]
+    title = "API 문서"
+    description = "RestDocs With Swagger"
+    version = "0.0.1"
+    format = "yaml"
+    outputFileNamePrefix = "openapi3"
+    outputDirectory = "build/api-spec"
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-web-services'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.projectlombok:lombok'
+    implementation 'jakarta.validation:jakarta.validation-api'
+    runtimeOnly 'org.postgresql:postgresql'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testImplementation 'com.h2database:h2'
+
+    // restdocs
+    testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
+    testImplementation "com.epages:restdocs-api-spec-restassured:${restdocsApiSpecVersion}"
+    testImplementation 'io.rest-assured:rest-assured'
+
+    // S3
+    implementation platform('software.amazon.awssdk:bom:2.29.0')
+    implementation 'software.amazon.awssdk:s3'
+    implementation 'software.amazon.awssdk:sso'
+    implementation 'software.amazon.awssdk:ssooidc'
+
+    // lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // security
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    // jwt
+    implementation 'io.jsonwebtoken:jjwt-api:0.12.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.5'
+
+    // redis
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+
+    testImplementation 'org.springframework.security:spring-security-test'
+
+    // monitoring
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'io.micrometer:micrometer-registry-prometheus'
+
+    // openapi3
+    testImplementation 'com.epages:restdocs-api-spec-mockmvc:' + restdocsApiSpecVersion
+
+    // swaggerUI
+    swaggerUI 'org.webjars:swagger-ui:4.11.1'
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2'
+
+    // BadWordFilter (비속어 필터링 라이브러리)
+    implementation 'io.github.vaneproject:badwordfiltering:1.0.0'
+
+    // Firebase Admin SDK
+    implementation 'com.google.firebase:firebase-admin:9.4.1'
+}
+
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
+tasks.processTestResources {
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    from('src/test/resources') {
+        include 'application-test.yml'
+        include 'initial_data.yml'
+    }
+}
+
+tasks.processResources {
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}
+
+sourceSets {
+    test {
+        resources {
+            srcDir 'src/test/resources'
+        }
+    }
+}
+
+test {
+    useJUnitPlatform()
+    systemProperty 'spring.profiles.active', 'test'
+}
+
+tasks.register('copySwaggerUI', Copy) {
+    dependsOn 'openapi3'
+    from("build/api-spec/")
+    into("src/main/resources/static/docs/")
+    doLast {
+        def openApiFile = file("src/main/resources/static/docs/openapi3.yaml")
+
+        def securitySchemesContent = """
+  securitySchemes:
+    APIKey:
+      type: apiKey
+      name: access_token
+      in: cookie
+security:
+  - APIKey: []
+"""
+        openApiFile.append(securitySchemesContent)
+    }
+}
+
+bootJar {
+    dependsOn 'generateSwaggerUI'
+    dependsOn 'copySwaggerUI'
+}
+
+bootRun {
+    dependsOn 'generateSwaggerUI'
+    dependsOn 'copySwaggerUI'
+}
+
+spotless {
+    java {
+        removeUnusedImports()
+        cleanthat()
+        googleJavaFormat()
+        formatAnnotations()
+    }
+}

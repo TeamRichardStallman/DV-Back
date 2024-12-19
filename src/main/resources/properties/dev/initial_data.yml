@@ -1,0 +1,14 @@
+job:
+  jobs:
+    - jobName: "BACK_END"
+      jobNameKorean: "백엔드"
+      jobDescription: "백엔드 직무입니다."
+    - jobName: "FRONT_END"
+      jobNameKorean: "프론트엔드"
+      jobDescription: "프론트엔드 직무입니다."
+    - jobName: "INFRA"
+      jobNameKorean: "인프라"
+      jobDescription: "인프라 직무입니다."
+    - jobName: "AI"
+      jobNameKorean: "인공지능"
+      jobDescription: "인공지능 직무입니다."
