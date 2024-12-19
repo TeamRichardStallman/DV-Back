@@ -101,4 +101,4 @@ firebase:
   config-path: firebase/ikdk-55b6f-firebase-adminsdk-xwlmi-6121debed2.json
 
 security:
-  excluded-paths: /docs/**,favicon.ico,/evaluation/completion,/question/completion,/answer/evaluations,/user/validate-username,/ping-pong,/actuator/prometheus
+  excluded-paths: /docs/**,favicon.ico,/evaluation/completion,/question/completion,/answer/evaluations,/user/validate-username,/ping-pong,/actuator/prometheus,/actuator/loggers

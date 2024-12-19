@@ -5,37 +5,43 @@ FROM openjdk:17-jdk-slim AS build
 ENV APP_HOME=/app
 WORKDIR $APP_HOME
 
-# 3. Copy Gradle Wrapper and project files
+# 3. Copy build script and Gradle Wrapper (rarely changes)
 COPY gradlew $APP_HOME/gradlew
 COPY gradle $APP_HOME/gradle
 COPY build.gradle $APP_HOME/
-COPY src $APP_HOME/src
-COPY .env $APP_HOME/.env
+COPY settings.gradle $APP_HOME/ # 필요시 추가
 
 # 4. Give execution permission to Gradle Wrapper
 RUN chmod +x ./gradlew
 
-# 5. Build the application
+# 5. Download dependencies (uses cache unless build.gradle changes)
+RUN ./gradlew dependencies --no-daemon
+
+# 6. Copy application source code (changes frequently)
+COPY src $APP_HOME/src
+COPY .env $APP_HOME/.env
+
+# 7. Build the application
 RUN ./gradlew build --no-daemon
 
-# 6. Use a smaller JRE image for the final container
+# 8. Use a smaller JRE image for the final container
 FROM openjdk:17-jdk-slim
 
-# 7. Set working directory
+# 9. Set working directory
 WORKDIR /app
 
-# 8. Copy the built JAR file from the build stage
+# 10. Copy the built JAR file from the build stage
 COPY --from=build /app/build/libs/*.jar app.jar
 
-# 9. Expose the port your application runs on (default: 8080)
+# 11. Expose the port your application runs on (default: 8080)
 EXPOSE 8080
 
-#서버 환경 설정
+# 12. Server environment setup
 ARG ENVIRONMENT=dev
 ENV ENVIRONMENT=${ENVIRONMENT}
 
-# 로그 디렉토리 생성
+# 13. Create logs directory
 RUN mkdir /app/logs
 
-# 애플리케이션 실행
+# 14. Run the application
 ENTRYPOINT ["java", "-jar", "app.jar", "--spring.profiles.active=${ENVIRONMENT}"]
