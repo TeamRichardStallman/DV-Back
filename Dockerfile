@@ -1,11 +1,33 @@
-FROM amazoncorretto:17-alpine
+# 1. Use an official JDK image as the base image
+FROM openjdk:17-jdk-slim AS build
 
-# 작업 디렉토리 설정
+# 2. Set environment variables
+ENV APP_HOME=/app
+WORKDIR $APP_HOME
+
+# 3. Copy Gradle Wrapper and project files
+COPY gradlew $APP_HOME/gradlew
+COPY gradle $APP_HOME/gradle
+COPY build.gradle $APP_HOME/
+COPY src $APP_HOME/src
+
+# 4. Give execution permission to Gradle Wrapper
+RUN chmod +x ./gradlew
+
+# 5. Build the application
+RUN ./gradlew build --no-daemon
+
+# 6. Use a smaller JRE image for the final container
+FROM openjdk:17-jdk-slim
+
+# 7. Set working directory
 WORKDIR /app
 
-# JAR 파일과 설정 파일 복사
-ARG JAR_FILE=build/libs/DV-Back-0.0.1-SNAPSHOT.jar
-COPY ${JAR_FILE} app.jar
+# 8. Copy the built JAR file from the build stage
+COPY --from=build /app/build/libs/*.jar app.jar
+
+# 9. Expose the port your application runs on (default: 8080)
+EXPOSE 8080
 
 #서버 환경 설정
 ARG ENVIRONMENT=dev
