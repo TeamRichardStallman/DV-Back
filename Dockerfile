@@ -9,7 +9,6 @@ WORKDIR $APP_HOME
 COPY gradlew $APP_HOME/gradlew
 COPY gradle $APP_HOME/gradle
 COPY build.gradle $APP_HOME/
-COPY settings.gradle $APP_HOME/ # 필요시 추가
 
 # 4. Give execution permission to Gradle Wrapper
 RUN chmod +x ./gradlew
