@@ -14,7 +14,7 @@ COPY build.gradle $APP_HOME/
 RUN chmod +x ./gradlew
 
 # 5. Download dependencies (uses cache unless build.gradle changes)
-RUN ./gradlew dependencies --no-daemon
+RUN --mount=type=cache,target=/data/docker/gradle ./gradlew dependencies --no-daemon
 
 # 6. Copy application source code (changes frequently)
 COPY src $APP_HOME/src
