@@ -21,7 +21,8 @@ COPY src $APP_HOME/src
 COPY .env $APP_HOME/.env
 
 # 7. Build the application
-RUN ./gradlew build --no-daemon
+RUN --mount=type=cache,target=/data/docker/gradle \
+    ./gradlew build --no-daemon --build-cache
 
 # 8. Use a smaller JRE image for the final container
 FROM openjdk:17-jdk-slim
