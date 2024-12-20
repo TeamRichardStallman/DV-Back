@@ -9,6 +9,8 @@ public interface S3Service {
 
   PreSignedUrlResponseDto getPreSignedUrlForImage(String fileName, Long userId);
 
+  PreSignedUrlResponseDto createPreSignedUrlForPostImage(String fileName, Long postId);
+
   PreSignedUrlResponseDto createPreSignedURLForInterview(
       FileType fileType,
       String fileName,

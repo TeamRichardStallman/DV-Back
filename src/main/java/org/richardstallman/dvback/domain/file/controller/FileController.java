@@ -41,6 +41,19 @@ public class FileController {
     return ResponseEntity.status(HttpStatus.CREATED).body(DvApiResponse.of(coverLetterResponseDto));
   }
 
+  @GetMapping("/post-image/{fileName}/{postId}/upload-url")
+  public ResponseEntity<DvApiResponse<PreSignedUrlResponseDto>> getPostImageUploadUrl(
+      @PathVariable String fileName, @PathVariable Long postId) {
+    log.info("Generating preSigned URL for file upload: fileName={}", fileName);
+
+    PreSignedUrlResponseDto preSignedUrl =
+        s3Service.createPreSignedUrlForPostImage(fileName, postId);
+
+    return ResponseEntity.ok()
+        .contentType(MediaType.APPLICATION_JSON)
+        .body(DvApiResponse.of(preSignedUrl));
+  }
+
   @GetMapping("/cover-letter/{interviewId}/{fileName}/upload-url")
   public ResponseEntity<DvApiResponse<PreSignedUrlResponseDto>>
       getCoverLetterUploadUrlWhenInputInterviewInfo(
@@ -69,6 +82,8 @@ public class FileController {
     PreSignedUrlResponseDto preSignedUrl =
         s3Service.createPreSignedURLForInterview(
             FileType.COVER_LETTER, fileName, userId, null, null);
+
+    log.info("Generated preSigned URL on my page: {}", preSignedUrl);
 
     return ResponseEntity.ok(DvApiResponse.of(preSignedUrl));
   }

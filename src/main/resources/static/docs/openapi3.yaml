@@ -46,7 +46,7 @@ paths:
                         "commentId" : 1,
                         "postId" : 1,
                         "comment" : "댓글 내용입니다.",
-                        "generatedAt" : "2024-12-05T17:13:33.259103"
+                        "generatedAt" : "2024-12-19T16:35:47.605317"
                       }
                     }
   /comment/{commentId}:
@@ -101,7 +101,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/comment-author-commentAuthorId-1237191268'
+                $ref: '#/components/schemas/comment-post-postId-1237191268'
               examples:
                 댓글 목록 조회(유저가 작성한 댓글 목록 최신순) - 성공:
                   value: |-
@@ -113,17 +113,17 @@ paths:
                           "commentId" : 1,
                           "postId" : 1,
                           "comment" : "댓글1",
-                          "generatedAt" : "2024-12-05T17:13:33.219495"
+                          "generatedAt" : "2024-12-19T16:35:47.55975"
                         }, {
                           "commentId" : 2,
                           "postId" : 3,
                           "comment" : "댓글2",
-                          "generatedAt" : "2024-12-05T17:13:33.219507"
+                          "generatedAt" : "2024-12-19T16:35:47.559764"
                         }, {
                           "commentId" : 3,
                           "postId" : 8,
                           "comment" : "댓글3",
-                          "generatedAt" : "2024-12-05T17:13:33.21951"
+                          "generatedAt" : "2024-12-19T16:35:47.559767"
                         } ]
                       }
                     }
@@ -147,7 +147,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/comment-author-commentAuthorId-1237191268'
+                $ref: '#/components/schemas/comment-post-postId-1237191268'
               examples:
                 댓글 목록 조회(게시글 작성순) - 성공:
                   value: |-
@@ -159,17 +159,17 @@ paths:
                           "commentId" : 1,
                           "postId" : 1,
                           "comment" : "댓글1",
-                          "generatedAt" : "2024-12-05T17:13:33.297112"
+                          "generatedAt" : "2024-12-19T16:35:47.644773"
                         }, {
                           "commentId" : 2,
                           "postId" : 1,
                           "comment" : "댓글2",
-                          "generatedAt" : "2024-12-05T17:13:33.297122"
+                          "generatedAt" : "2024-12-19T16:35:47.644781"
                         }, {
                           "commentId" : 3,
                           "postId" : 1,
                           "comment" : "댓글3",
-                          "generatedAt" : "2024-12-05T17:13:33.297124"
+                          "generatedAt" : "2024-12-19T16:35:47.644783"
                         } ]
                       }
                     }
@@ -219,9 +219,9 @@ paths:
                         "interviewAssetTypeKorean" : "채팅",
                         "isUsed" : false,
                         "isExpired" : false,
-                        "generatedAt" : "2024-12-05T17:13:35",
+                        "generatedAt" : "2024-12-19T16:35:49",
                         "usedAt" : null,
-                        "expireAt" : "2025-01-05T23:59:59"
+                        "expireAt" : "2025-01-19T23:59:59"
                       }
                     }
   /coupon/use:
@@ -267,9 +267,9 @@ paths:
                           "interviewAssetTypeKorean" : "채팅",
                           "isUsed" : true,
                           "isExpired" : false,
-                          "generatedAt" : "2024-12-05T17:13:35",
-                          "usedAt" : "2024-12-05T17:13:35",
-                          "expireAt" : "2025-01-05T23:59:59"
+                          "generatedAt" : "2024-12-19T16:35:49",
+                          "usedAt" : "2024-12-19T16:35:49",
+                          "expireAt" : "2025-01-19T23:59:59"
                         },
                         "chargedTicketTransactionInfo" : {
                           "totalBalance" : 10,
@@ -289,7 +289,7 @@ paths:
                             "interviewAssetType" : "CHAT",
                             "interviewAssetTypeKorean" : "채팅",
                             "description" : "충전 쿠폰",
-                            "generatedAt" : "2024-12-05T17:13:35"
+                            "generatedAt" : "2024-12-19T16:35:49"
                           }
                         }
                       }
@@ -321,28 +321,28 @@ paths:
                           "couponName" : "웰컴 쿠폰",
                           "interviewModeKorean" : "실전",
                           "interviewAssetTypeKorean" : "채팅",
-                          "expireAt" : "2024-12-05T17:12:35"
+                          "expireAt" : "2024-12-19T16:34:49"
                         }, {
                           "couponId" : 2,
                           "chargeAmount" : 1,
                           "couponName" : "웰컴 쿠폰",
                           "interviewModeKorean" : "실전",
                           "interviewAssetTypeKorean" : "음성",
-                          "expireAt" : "2024-12-05T16:13:35"
+                          "expireAt" : "2024-12-19T15:35:49"
                         }, {
                           "couponId" : 3,
                           "chargeAmount" : 5,
                           "couponName" : "웰컴 쿠폰",
                           "interviewModeKorean" : "모의",
                           "interviewAssetTypeKorean" : "채팅",
-                          "expireAt" : "2024-12-04T17:13:35"
+                          "expireAt" : "2024-12-18T16:35:49"
                         }, {
                           "couponId" : 4,
                           "chargeAmount" : 3,
                           "couponName" : "웰컴 쿠폰",
                           "interviewModeKorean" : "모의",
                           "interviewAssetTypeKorean" : "음성",
-                          "expireAt" : "2024-11-05T17:13:35"
+                          "expireAt" : "2024-11-19T16:35:49"
                         } ]
                       }
                     }
@@ -373,28 +373,28 @@ paths:
                           "couponName" : "웰컴 쿠폰",
                           "interviewModeKorean" : "실전",
                           "interviewAssetTypeKorean" : "채팅",
-                          "expireAt" : "2025-01-05T23:59:59"
+                          "expireAt" : "2025-01-19T23:59:59"
                         }, {
                           "couponId" : 2,
                           "chargeAmount" : 1,
                           "couponName" : "웰컴 쿠폰",
                           "interviewModeKorean" : "실전",
                           "interviewAssetTypeKorean" : "음성",
-                          "expireAt" : "2025-01-05T23:59:59"
+                          "expireAt" : "2025-01-19T23:59:59"
                         }, {
                           "couponId" : 3,
                           "chargeAmount" : 5,
                           "couponName" : "웰컴 쿠폰",
                           "interviewModeKorean" : "모의",
                           "interviewAssetTypeKorean" : "채팅",
-                          "expireAt" : "2025-01-05T23:59:59"
+                          "expireAt" : "2025-01-19T23:59:59"
                         }, {
                           "couponId" : 4,
                           "chargeAmount" : 3,
                           "couponName" : "웰컴 쿠폰",
                           "interviewModeKorean" : "모의",
                           "interviewAssetTypeKorean" : "음성",
-                          "expireAt" : "2025-01-05T23:59:59"
+                          "expireAt" : "2025-01-19T23:59:59"
                         } ]
                       }
                     }
@@ -425,28 +425,28 @@ paths:
                           "couponName" : "웰컴 쿠폰",
                           "interviewModeKorean" : "실전",
                           "interviewAssetTypeKorean" : "채팅",
-                          "usedAt" : "2024-12-05T14:13:35"
+                          "usedAt" : "2024-12-19T13:35:49"
                         }, {
                           "couponId" : 2,
                           "chargeAmount" : 1,
                           "couponName" : "웰컴 쿠폰",
                           "interviewModeKorean" : "실전",
                           "interviewAssetTypeKorean" : "음성",
-                          "usedAt" : "2024-12-04T17:13:35"
+                          "usedAt" : "2024-12-18T16:35:49"
                         }, {
                           "couponId" : 3,
                           "chargeAmount" : 5,
                           "couponName" : "웰컴 쿠폰",
                           "interviewModeKorean" : "모의",
                           "interviewAssetTypeKorean" : "채팅",
-                          "usedAt" : "2024-10-05T17:13:35"
+                          "usedAt" : "2024-10-19T16:35:49"
                         }, {
                           "couponId" : 4,
                           "chargeAmount" : 3,
                           "couponName" : "웰컴 쿠폰",
                           "interviewModeKorean" : "모의",
                           "interviewAssetTypeKorean" : "음성",
-                          "usedAt" : "2024-08-05T17:13:35"
+                          "usedAt" : "2024-08-19T16:35:49"
                         } ]
                       }
                     }
@@ -461,14 +461,14 @@ paths:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/evaluation-completion-1670790523'
+              $ref: '#/components/schemas/evaluation-completion1346081302'
             examples:
               파이썬 요청 - 면접 평가 완료 - 성공:
                 value: |-
                   {
-                    "userId" : 1,
-                    "interviewId" : 1,
-                    "overallEvaluation" : {
+                    "user_id" : 1,
+                    "interview_id" : 1,
+                    "overall_evaluation" : {
                       "text_overall" : {
                         "job_fit" : {
                           "score" : 1,
@@ -485,7 +485,11 @@ paths:
                         "technical_depth" : {
                           "score" : 1,
                           "rationale" : "11"
-                        }
+                        },
+                        "company_fit" : null,
+                        "adaptability" : null,
+                        "interpersonal_skills" : null,
+                        "growth_attitude" : null
                       },
                       "voice_overall" : {
                         "fluency" : {
@@ -538,7 +542,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/evaluation-interviewId-330994788'
+                $ref: '#/components/schemas/evaluation-interviewId-1124488599'
               examples:
                 마이페이지 - 면접 평가 조회 - 성공:
                   value: |-
@@ -572,6 +576,7 @@ paths:
                           "answerEvaluationId" : 1,
                           "questionText" : "질문 텍스트 입니다.",
                           "answerText" : "답변 텍스트 입니다.",
+                          "answerS3PresignedUrl" : "https://bucket.com",
                           "answerFeedbackStrength" : "answerFeedbackStrength",
                           "answerFeedbackImprovement" : "answerFeedbackImprovement",
                           "answerFeedbackSuggestion" : "answerFeedbackSuggestion",
@@ -583,6 +588,41 @@ paths:
                             "answerEvaluationType" : "TEXT"
                           } ]
                         } ]
+                      }
+                    }
+  /fcm/token:
+    post:
+      tags:
+      - FCM API
+      summary: Firebase Cloud Messaging API
+      description: 유저의 FCM 토큰을 저장하는 API
+      operationId: FCM 토큰 저장 - 성공
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              $ref: '#/components/schemas/fcm-token-973757885'
+            examples:
+              FCM 토큰 저장 - 성공:
+                value: |-
+                  {
+                    "token" : "sampleToken"
+                  }
+      responses:
+        "201":
+          description: "201"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/fcm-token-131836546'
+              examples:
+                FCM 토큰 저장 - 성공:
+                  value: |-
+                    {
+                      "code" : 200,
+                      "message" : "SUCCESS",
+                      "data" : {
+                        "message" : "Token saved successfully!"
                       }
                     }
   /file/cover-letter:
@@ -624,6 +664,68 @@ paths:
                         } ]
                       }
                     }
+    post:
+      tags:
+      - File API
+      summary: 마이페이지에서 자소서 저장
+      description: 마이페이지에서 자소서 저장
+      operationId: 마이페이지에서 자소서 저장
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              $ref: '#/components/schemas/file-cover-letter-412892686'
+            examples:
+              마이페이지에서 자소서 저장:
+                value: |-
+                  {
+                    "type" : "COVER_LETTER",
+                    "filePath" : "filePath"
+                  }
+      responses:
+        "201":
+          description: "201"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/file-cover-letter-1298800292'
+              examples:
+                마이페이지에서 자소서 저장:
+                  value: |-
+                    {
+                      "code" : 200,
+                      "message" : "SUCCESS",
+                      "data" : {
+                        "fileId" : 2,
+                        "type" : "COVER_LETTER",
+                        "fileName" : "fileName",
+                        "s3FileUrl" : "s3FileUrl"
+                      }
+                    }
+  /file/profile-image/download-url:
+    get:
+      tags:
+      - File API
+      summary: 파일 API
+      description: 파일 API
+      operationId: 프로필 이미지 다운로드 url 받기 - 성공
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/file-profile-image-download-url1961583156'
+              examples:
+                프로필 이미지 다운로드 url 받기 - 성공:
+                  value: |-
+                    {
+                      "code" : 200,
+                      "message" : "SUCCESS",
+                      "data" : {
+                        "preSignedUrl" : "https://s3.aws.com/profile-image/1/profile-image.jpg"
+                      }
+                    }
   /file/cover-letter/{fileName}/upload-url:
     get:
       tags:
@@ -644,7 +746,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/file-cover-letter-fileName-upload-url-1617557868'
+                $ref: '#/components/schemas/file-cover-letter-fileName-upload-url803243778'
               examples:
                 마이페이지에서 PreSigned URL 생성:
                   value: |-
@@ -652,7 +754,8 @@ paths:
                       "code" : 200,
                       "message" : "SUCCESS",
                       "data" : {
-                        "preSignedUrl" : "https://s3.aws.com/testFile.txt"
+                        "preSignedUrl" : "https://s3.aws.com/testFile.txt",
+                        "objectKey" : "testFile.txt"
                       }
                     }
   /file/cover-letter/{interviewId}/download-url:
@@ -675,7 +778,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/file-cover-letter-interviewId-fileName-upload-url1961583156'
+                $ref: '#/components/schemas/file-cover-letter-interviewId-download-url-1410657502'
               examples:
                 면접 자소서 다운로드 url 받기 - 성공:
                   value: |-
@@ -683,7 +786,8 @@ paths:
                       "code" : 200,
                       "message" : "SUCCESS",
                       "data" : {
-                        "preSignedUrl" : "https://s3.aws.com/cover-letter/1/cover-letter-test.txt"
+                        "preSignedUrl" : "https://s3.aws.com/cover-letter/1/cover-letter-test.txt",
+                        "objectKey" : "/files/cover-letter/2/1/cover-letter-test.txt"
                       }
                     }
   /file/profile-image/{fileName}/upload-url:
@@ -706,7 +810,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/file-cover-letter-interviewId-fileName-upload-url1961583156'
+                $ref: '#/components/schemas/file-cover-letter-interviewId-download-url-1410657502'
               examples:
                 프로필 이미지 PreSignedUrl 받기 - 성공:
                   value: |-
@@ -714,7 +818,116 @@ paths:
                       "code" : 200,
                       "message" : "SUCCESS",
                       "data" : {
-                        "preSignedUrl" : "https://s3.aws.com/profile-image/1/profile-image.jpg"
+                        "preSignedUrl" : "https://s3.aws.com/profile-image/1/profile-image.jpg",
+                        "objectKey" : "profile-img.jpg"
+                      }
+                    }
+  /file/audio/{interviewId}/{questionId}/download-url:
+    get:
+      tags:
+      - File API
+      summary: 오디오 파일 다운로드를 위한 PreSigned URL 생성
+      description: 오디오 파일 다운로드를 위한 PreSigned URL 생성
+      operationId: 오디오 파일 다운로드 PreSigned URL 생성 - 성공
+      parameters:
+      - name: interviewId
+        in: path
+        description: 면접 ID
+        required: true
+        schema:
+          type: string
+      - name: questionId
+        in: path
+        description: 질문 ID
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/file-audio-interviewId-questionId-download-url-37488830'
+              examples:
+                오디오 파일 다운로드 PreSigned URL 생성 - 성공:
+                  value: |-
+                    {
+                      "code" : 200,
+                      "message" : "SUCCESS",
+                      "data" : {
+                        "preSignedUrl" : "https://s3.aws.com/audio/1/interview/2/question/3/audio-test.mp3",
+                        "objectKey" : "audio/1/interview/2/question/3/audio-test.mp3"
+                      }
+                    }
+  /file/audio/{interviewId}/{questionId}/upload-url:
+    get:
+      tags:
+      - File API
+      summary: 오디오 파일 업로드를 위한 PreSigned URL 생성
+      description: 오디오 파일 업로드를 위한 PreSigned URL 생성
+      operationId: 오디오 파일 업로드 PreSigned URL 생성
+      parameters:
+      - name: interviewId
+        in: path
+        description: 면접 ID
+        required: true
+        schema:
+          type: string
+      - name: questionId
+        in: path
+        description: 질문 ID
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/file-audio-interviewId-questionId-download-url-37488830'
+              examples:
+                오디오 파일 업로드 PreSigned URL 생성:
+                  value: |-
+                    {
+                      "code" : 200,
+                      "message" : "SUCCESS",
+                      "data" : {
+                        "preSignedUrl" : "https://s3.aws.com/audio/1/interview/2/question/3/audio-test.mp3",
+                        "objectKey" : "audio/1/interview/2/question/3/audio-test.mp3"
+                      }
+                    }
+  /file/cover-letter/user/{coverLetterId}/download-url:
+    get:
+      tags:
+      - File API
+      summary: 파일 API
+      description: 파일 API
+      operationId: 유저 자소서 다운로드 url 받기 - 성공
+      parameters:
+      - name: coverLetterId
+        in: path
+        description: ""
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/file-cover-letter-interviewId-download-url-1410657502'
+              examples:
+                유저 자소서 다운로드 url 받기 - 성공:
+                  value: |-
+                    {
+                      "code" : 200,
+                      "message" : "SUCCESS",
+                      "data" : {
+                        "preSignedUrl" : "https://s3.aws.com/9e715748-52d8-49b2-96dd-a436e9b15903.docx",
+                        "objectKey" : "9e715748-52d8-49b2-96dd-a436e9b15903.docx"
                       }
                     }
   /file/cover-letter/{interviewId}/{fileName}/upload-url:
@@ -743,7 +956,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/file-cover-letter-interviewId-fileName-upload-url1961583156'
+                $ref: '#/components/schemas/file-cover-letter-interviewId-download-url-1410657502'
               examples:
                 면접 정보 입력 시 PreSigned URL 생성:
                   value: |-
@@ -751,7 +964,8 @@ paths:
                       "code" : 200,
                       "message" : "SUCCESS",
                       "data" : {
-                        "preSignedUrl" : "https://s3.aws.com/testFile.txt"
+                        "preSignedUrl" : "https://s3.aws.com/testFile.txt",
+                        "objectKey" : "testFile.txt"
                       }
                     }
   /interview:
@@ -793,7 +1007,7 @@ paths:
                             "fileId" : 1,
                             "type" : "COVER_LETTER",
                             "fileName" : "coverLetterName",
-                            "s3FileUrl" : "COVER_LETTER/1/1733386419909/coverLetterName"
+                            "s3FileUrl" : "COVER_LETTER/1/1734593752973/coverLetterName"
                           } ]
                         }, {
                           "interviewId" : 2,
@@ -813,7 +1027,7 @@ paths:
                             "fileId" : 2,
                             "type" : "COVER_LETTER",
                             "fileName" : "coverLetterName2",
-                            "s3FileUrl" : "COVER_LETTER/1/1733386419909/coverLetterName2"
+                            "s3FileUrl" : "COVER_LETTER/1/1734593752973/coverLetterName2"
                           } ]
                         }, {
                           "interviewId" : 3,
@@ -833,7 +1047,7 @@ paths:
                             "fileId" : 3,
                             "type" : "COVER_LETTER",
                             "fileName" : "coverLetterName3",
-                            "s3FileUrl" : "COVER_LETTER/1/1733386419909/coverLetterName3"
+                            "s3FileUrl" : "COVER_LETTER/1/1734593752973/coverLetterName3"
                           } ]
                         }, {
                           "interviewId" : 4,
@@ -851,6 +1065,62 @@ paths:
                           },
                           "files" : [ ]
                         } ]
+                      }
+                    }
+    put:
+      tags:
+      - Interview API
+      summary: 면접 파일 정보 추가 위한 면접 수정 API
+      description: 면접 파일 정보 추가 위한 면접 수정 API
+      operationId: 면접 방식이 VOICE일 때 면접 파일 s3 업로드 후 따로 저장 위한 면접 수정 - 성공
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              $ref: '#/components/schemas/interview851286540'
+            examples:
+              면접 방식이 VOICE일 때 면접 파일 s3 업로드 후 따로 저장 위한 면접 수정 - 성공:
+                value: |-
+                  {
+                    "interviewId" : 2,
+                    "coverLetter" : {
+                      "type" : "COVER_LETTER",
+                      "filePath" : "s3FileUrl"
+                    }
+                  }
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/interview1204019169'
+              examples:
+                면접 방식이 VOICE일 때 면접 파일 s3 업로드 후 따로 저장 위한 면접 수정 - 성공:
+                  value: |-
+                    {
+                      "code" : 200,
+                      "message" : "SUCCESS",
+                      "data" : {
+                        "interviewId" : 2,
+                        "interviewTitle" : "2024-12-15_TECHNICAL_CHAT_REAL_면접",
+                        "interviewStatus" : "FILE_UPLOADED",
+                        "interviewType" : "TECHNICAL",
+                        "interviewMethod" : "CHAT",
+                        "interviewMode" : "REAL",
+                        "questionCount" : 5,
+                        "job" : {
+                          "jobId" : 1,
+                          "jobName" : "BACK_END",
+                          "jobNameKorean" : "백엔드",
+                          "jobDescription" : "백엔드 직무입니다."
+                        },
+                        "file" : {
+                          "fileId" : 1,
+                          "type" : "COVER_LETTER",
+                          "fileName" : "fileName",
+                          "s3FileUrl" : "s3FileUrl"
+                        }
                       }
                     }
     post:
@@ -884,7 +1154,7 @@ paths:
                     "questionCount" : 5,
                     "files" : [ {
                       "type" : "COVER_LETTER",
-                      "filePath" : "COVER_LETTER/1/1733386419948/coverLetterName"
+                      "filePath" : "COVER_LETTER/1/1734593753009/coverLetterName"
                     } ]
                   }
               면접 정보 입력 - 존재하지 않는 직무 ID(500 Internal Server Error):
@@ -898,7 +1168,7 @@ paths:
                     "questionCount" : 5,
                     "files" : [ {
                       "type" : "COVER_LETTER",
-                      "filePath" : "COVER_LETTER/1/1733386419897/coverLetterName"
+                      "filePath" : "COVER_LETTER/1/1734593752960/coverLetterName"
                     } ]
                   }
               면접 정보 입력 - 필수 필드 누락(400 Bad Request):
@@ -912,7 +1182,7 @@ paths:
                     "questionCount" : 5,
                     "files" : [ {
                       "type" : "COVER_LETTER",
-                      "filePath" : "COVER_LETTER/1/1733386419925/coverLetterName"
+                      "filePath" : "COVER_LETTER/1/1734593752985/coverLetterName"
                     } ]
                   }
               면접 정보 입력 - 면접 저장 성공:
@@ -926,7 +1196,7 @@ paths:
                     "questionCount" : 5,
                     "files" : [ {
                       "type" : "COVER_LETTER",
-                      "filePath" : "COVER_LETTER/1/1733386419847/coverLetterName"
+                      "filePath" : "COVER_LETTER/1/1734593752909/coverLetterName"
                     } ]
                   }
       responses:
@@ -1009,7 +1279,7 @@ paths:
                           "fileId" : 1,
                           "type" : "COVER_LETTER",
                           "fileName" : "coverLetterName",
-                          "s3FileUrl" : "COVER_LETTER/1/1733386419847/coverLetterName"
+                          "s3FileUrl" : "COVER_LETTER/1/1734593752909/coverLetterName"
                         } ],
                         "ticket" : {
                           "totalBalance" : 10,
@@ -1029,7 +1299,7 @@ paths:
                             "interviewAssetType" : "CHAT",
                             "interviewAssetTypeKorean" : "채팅",
                             "description" : "채팅 면접 사용",
-                            "generatedAt" : "2024-12-05T17:13:39.847353"
+                            "generatedAt" : "2024-12-19T16:35:52.909946"
                           }
                         }
                       }
@@ -1070,6 +1340,35 @@ paths:
                         } ]
                       }
                     }
+  /interview/{interviewId}/owner:
+    get:
+      tags:
+      - Interview API
+      summary: 인터뷰 소유 여부 확인
+      description: 주어진 인터뷰 ID에 대해 사용자가 소유자인지 확인합니다.
+      operationId: 인터뷰 소유 여부 확인 - 사용자가 소유자인 경우 true 반환
+      parameters:
+      - name: interviewId
+        in: path
+        description: 확인할 인터뷰의 식별자
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/interview-interviewId-owner1484301643'
+              examples:
+                인터뷰 소유 여부 확인 - 사용자가 소유자인 경우 true 반환:
+                  value: |-
+                    {
+                      "code" : 200,
+                      "message" : "SUCCESS",
+                      "data" : true
+                    }
   /ping-pong:
     get:
       tags:
@@ -1081,7 +1380,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ping-pong486549215'
+                $ref: '#/components/schemas/user-logout486549215'
               examples:
                 ping-pong:
                   value: "{\"code\":200,\"message\":\"SUCCESS\",\"data\":\"pong\"}"
@@ -1134,7 +1433,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/post-1902421517'
+                $ref: '#/components/schemas/post-218793856'
               examples:
                 게시글 작성 테스트(면접 공유 INTERVIEW) - 성공:
                   value: |-
@@ -1143,6 +1442,9 @@ paths:
                       "message" : "SUCCESS",
                       "data" : {
                         "postId" : 100,
+                        "authorId" : 12,
+                        "authorNickname" : "nickname",
+                        "authorProfileUrl" : "authorProfileUrl",
                         "jobName" : "BACK_END",
                         "jobNameKorean" : "백엔드",
                         "content" : "This is a test post content.",
@@ -1170,7 +1472,7 @@ paths:
                         },
                         "evaluation" : null,
                         "postType" : "INTERVIEW",
-                        "generatedAt" : "2024-12-05T17:13:43.420446"
+                        "generatedAt" : "2024-12-19T16:35:56.146705"
                       }
                     }
                 게시글 작성 테스트(일반 POST) - 성공:
@@ -1180,6 +1482,9 @@ paths:
                       "message" : "SUCCESS",
                       "data" : {
                         "postId" : 100,
+                        "authorId" : 12,
+                        "authorNickname" : "nickname",
+                        "authorProfileUrl" : "authorProfileUrl",
                         "jobName" : "BACK_END",
                         "jobNameKorean" : "백엔드",
                         "content" : "This is a test post content.",
@@ -1187,7 +1492,7 @@ paths:
                         "interview" : null,
                         "evaluation" : null,
                         "postType" : "POST",
-                        "generatedAt" : "2024-12-05T17:13:43.377038"
+                        "generatedAt" : "2024-12-19T16:35:56.103629"
                       }
                     }
                 게시글 작성 테스트(평가 공유 EVALUATION) - 성공:
@@ -1197,6 +1502,9 @@ paths:
                       "message" : "SUCCESS",
                       "data" : {
                         "postId" : 100,
+                        "authorId" : 12,
+                        "authorNickname" : "nickname",
+                        "authorProfileUrl" : "authorProfileUrl",
                         "jobName" : "BACK_END",
                         "jobNameKorean" : "백엔드",
                         "content" : "This is a test post content.",
@@ -1239,6 +1547,7 @@ paths:
                             "answerEvaluationId" : 1,
                             "questionText" : "What is your greatest strength?",
                             "answerText" : "I am highly adaptable.",
+                            "answerS3PresignedUrl" : "https://www.bucket.com",
                             "answerFeedbackStrength" : "Good emphasis on adaptability.",
                             "answerFeedbackImprovement" : "Could elaborate more.",
                             "answerFeedbackSuggestion" : "Provide an example of adaptability.",
@@ -1258,7 +1567,7 @@ paths:
                           } ]
                         },
                         "postType" : "EVALUATION",
-                        "generatedAt" : "2024-12-05T17:13:43.331082"
+                        "generatedAt" : "2024-12-19T16:35:56.057233"
                       }
                     }
   /post/search:
@@ -1293,7 +1602,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/post-search2107435791'
+                $ref: '#/components/schemas/post-search1283205629'
               examples:
                 게시글 검색 - 성공:
                   value: |-
@@ -1303,6 +1612,9 @@ paths:
                       "data" : {
                         "posts" : [ {
                           "postId" : 100,
+                          "authorId" : 12,
+                          "authorNickname" : "nickname",
+                          "authorProfileUrl" : "authorProfileUrl",
                           "jobName" : "BACK_END",
                           "jobNameKorean" : "백엔드",
                           "content" : "This is a test post about Spring Boot.",
@@ -1310,9 +1622,12 @@ paths:
                           "interview" : null,
                           "evaluation" : null,
                           "postType" : "POST",
-                          "generatedAt" : "2024-12-05T17:13:43.388703"
+                          "generatedAt" : "2024-12-19T16:35:56.113721"
                         }, {
                           "postId" : 101,
+                          "authorId" : 12,
+                          "authorNickname" : "nickname",
+                          "authorProfileUrl" : "authorProfileUrl",
                           "jobName" : "BACK_END",
                           "jobNameKorean" : "백엔드",
                           "content" : "Testing JPA and database connections.",
@@ -1320,9 +1635,12 @@ paths:
                           "interview" : null,
                           "evaluation" : null,
                           "postType" : "POST",
-                          "generatedAt" : "2024-12-05T17:13:43.388709"
+                          "generatedAt" : "2024-12-19T16:35:56.113724"
                         }, {
                           "postId" : 102,
+                          "authorId" : 12,
+                          "authorNickname" : "nickname",
+                          "authorProfileUrl" : "authorProfileUrl",
                           "jobName" : "BACK_END",
                           "jobNameKorean" : "백엔드",
                           "content" : "Unit test examples with JUnit and Mockito.",
@@ -1330,9 +1648,12 @@ paths:
                           "interview" : null,
                           "evaluation" : null,
                           "postType" : "POST",
-                          "generatedAt" : "2024-12-05T17:13:43.388711"
+                          "generatedAt" : "2024-12-19T16:35:56.113727"
                         }, {
                           "postId" : 103,
+                          "authorId" : 12,
+                          "authorNickname" : "nickname",
+                          "authorProfileUrl" : "authorProfileUrl",
                           "jobName" : "BACK_END",
                           "jobNameKorean" : "백엔드",
                           "content" : "Integration testing best practices.",
@@ -1340,9 +1661,12 @@ paths:
                           "interview" : null,
                           "evaluation" : null,
                           "postType" : "POST",
-                          "generatedAt" : "2024-12-05T17:13:43.388713"
+                          "generatedAt" : "2024-12-19T16:35:56.113728"
                         }, {
                           "postId" : 104,
+                          "authorId" : 12,
+                          "authorNickname" : "nickname",
+                          "authorProfileUrl" : "authorProfileUrl",
                           "jobName" : "BACK_END",
                           "jobNameKorean" : "백엔드",
                           "content" : "Test-driven development workflow.",
@@ -1350,9 +1674,12 @@ paths:
                           "interview" : null,
                           "evaluation" : null,
                           "postType" : "POST",
-                          "generatedAt" : "2024-12-05T17:13:43.388715"
+                          "generatedAt" : "2024-12-19T16:35:56.113729"
                         }, {
                           "postId" : 105,
+                          "authorId" : 12,
+                          "authorNickname" : "nickname",
+                          "authorProfileUrl" : "authorProfileUrl",
                           "jobName" : "BACK_END",
                           "jobNameKorean" : "백엔드",
                           "content" : "Testing RESTful APIs with Spring Boot Test.",
@@ -1360,9 +1687,12 @@ paths:
                           "interview" : null,
                           "evaluation" : null,
                           "postType" : "POST",
-                          "generatedAt" : "2024-12-05T17:13:43.388716"
+                          "generatedAt" : "2024-12-19T16:35:56.113731"
                         }, {
                           "postId" : 106,
+                          "authorId" : 12,
+                          "authorNickname" : "nickname",
+                          "authorProfileUrl" : "authorProfileUrl",
                           "jobName" : "BACK_END",
                           "jobNameKorean" : "백엔드",
                           "content" : "Performance testing using JMeter.",
@@ -1370,9 +1700,12 @@ paths:
                           "interview" : null,
                           "evaluation" : null,
                           "postType" : "POST",
-                          "generatedAt" : "2024-12-05T17:13:43.388718"
+                          "generatedAt" : "2024-12-19T16:35:56.113732"
                         }, {
                           "postId" : 107,
+                          "authorId" : 12,
+                          "authorNickname" : "nickname",
+                          "authorProfileUrl" : "authorProfileUrl",
                           "jobName" : "BACK_END",
                           "jobNameKorean" : "백엔드",
                           "content" : "End-to-end testing strategies.",
@@ -1380,9 +1713,12 @@ paths:
                           "interview" : null,
                           "evaluation" : null,
                           "postType" : "POST",
-                          "generatedAt" : "2024-12-05T17:13:43.38872"
+                          "generatedAt" : "2024-12-19T16:35:56.113733"
                         }, {
                           "postId" : 108,
+                          "authorId" : 12,
+                          "authorNickname" : "nickname",
+                          "authorProfileUrl" : "authorProfileUrl",
                           "jobName" : "BACK_END",
                           "jobNameKorean" : "백엔드",
                           "content" : "Test coverage analysis with JaCoCo.",
@@ -1390,9 +1726,12 @@ paths:
                           "interview" : null,
                           "evaluation" : null,
                           "postType" : "POST",
-                          "generatedAt" : "2024-12-05T17:13:43.388722"
+                          "generatedAt" : "2024-12-19T16:35:56.113735"
                         }, {
                           "postId" : 109,
+                          "authorId" : 12,
+                          "authorNickname" : "nickname",
+                          "authorProfileUrl" : "authorProfileUrl",
                           "jobName" : "BACK_END",
                           "jobNameKorean" : "백엔드",
                           "content" : "Automated testing pipeline setup.",
@@ -1400,7 +1739,7 @@ paths:
                           "interview" : null,
                           "evaluation" : null,
                           "postType" : "POST",
-                          "generatedAt" : "2024-12-05T17:13:43.388723"
+                          "generatedAt" : "2024-12-19T16:35:56.113736"
                         } ],
                         "currentPage" : 0,
                         "isLastPage" : false
@@ -1432,7 +1771,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/post-search2107435791'
+                $ref: '#/components/schemas/post-search1283205629'
               examples:
                 구독한 직무의 게시글 목록 페이징 조회 - 성공:
                   value: |-
@@ -1442,6 +1781,9 @@ paths:
                       "data" : {
                         "posts" : [ {
                           "postId" : 100,
+                          "authorId" : 12,
+                          "authorNickname" : "nickname",
+                          "authorProfileUrl" : "authorProfileUrl",
                           "jobName" : "BACK_END",
                           "jobNameKorean" : "백엔드",
                           "content" : "This is test post content 1.",
@@ -1449,9 +1791,12 @@ paths:
                           "interview" : null,
                           "evaluation" : null,
                           "postType" : "POST",
-                          "generatedAt" : "2024-12-05T17:13:43.355615"
+                          "generatedAt" : "2024-12-19T16:35:56.081961"
                         }, {
                           "postId" : 101,
+                          "authorId" : 12,
+                          "authorNickname" : "nickname",
+                          "authorProfileUrl" : "authorProfileUrl",
                           "jobName" : "BACK_END",
                           "jobNameKorean" : "백엔드",
                           "content" : "This is test post content 2.",
@@ -1459,9 +1804,12 @@ paths:
                           "interview" : null,
                           "evaluation" : null,
                           "postType" : "POST",
-                          "generatedAt" : "2024-12-05T17:13:43.355624"
+                          "generatedAt" : "2024-12-19T16:35:56.081965"
                         }, {
                           "postId" : 102,
+                          "authorId" : 12,
+                          "authorNickname" : "nickname",
+                          "authorProfileUrl" : "authorProfileUrl",
                           "jobName" : "BACK_END",
                           "jobNameKorean" : "백엔드",
                           "content" : "This is test post content 3.",
@@ -1469,9 +1817,12 @@ paths:
                           "interview" : null,
                           "evaluation" : null,
                           "postType" : "POST",
-                          "generatedAt" : "2024-12-05T17:13:43.355626"
+                          "generatedAt" : "2024-12-19T16:35:56.081966"
                         }, {
                           "postId" : 103,
+                          "authorId" : 12,
+                          "authorNickname" : "nickname",
+                          "authorProfileUrl" : "authorProfileUrl",
                           "jobName" : "BACK_END",
                           "jobNameKorean" : "백엔드",
                           "content" : "This is test post content 4.",
@@ -1479,9 +1830,12 @@ paths:
                           "interview" : null,
                           "evaluation" : null,
                           "postType" : "POST",
-                          "generatedAt" : "2024-12-05T17:13:43.355628"
+                          "generatedAt" : "2024-12-19T16:35:56.081968"
                         }, {
                           "postId" : 104,
+                          "authorId" : 12,
+                          "authorNickname" : "nickname",
+                          "authorProfileUrl" : "authorProfileUrl",
                           "jobName" : "BACK_END",
                           "jobNameKorean" : "백엔드",
                           "content" : "This is test post content 5.",
@@ -1489,9 +1843,12 @@ paths:
                           "interview" : null,
                           "evaluation" : null,
                           "postType" : "POST",
-                          "generatedAt" : "2024-12-05T17:13:43.35563"
+                          "generatedAt" : "2024-12-19T16:35:56.08197"
                         }, {
                           "postId" : 105,
+                          "authorId" : 12,
+                          "authorNickname" : "nickname",
+                          "authorProfileUrl" : "authorProfileUrl",
                           "jobName" : "BACK_END",
                           "jobNameKorean" : "백엔드",
                           "content" : "This is test post content 6.",
@@ -1499,9 +1856,12 @@ paths:
                           "interview" : null,
                           "evaluation" : null,
                           "postType" : "POST",
-                          "generatedAt" : "2024-12-05T17:13:43.355633"
+                          "generatedAt" : "2024-12-19T16:35:56.081971"
                         }, {
                           "postId" : 106,
+                          "authorId" : 12,
+                          "authorNickname" : "nickname",
+                          "authorProfileUrl" : "authorProfileUrl",
                           "jobName" : "BACK_END",
                           "jobNameKorean" : "백엔드",
                           "content" : "This is test post content 7.",
@@ -1509,9 +1869,12 @@ paths:
                           "interview" : null,
                           "evaluation" : null,
                           "postType" : "POST",
-                          "generatedAt" : "2024-12-05T17:13:43.355635"
+                          "generatedAt" : "2024-12-19T16:35:56.081973"
                         }, {
                           "postId" : 107,
+                          "authorId" : 12,
+                          "authorNickname" : "nickname",
+                          "authorProfileUrl" : "authorProfileUrl",
                           "jobName" : "BACK_END",
                           "jobNameKorean" : "백엔드",
                           "content" : "This is test post content 8.",
@@ -1519,9 +1882,12 @@ paths:
                           "interview" : null,
                           "evaluation" : null,
                           "postType" : "POST",
-                          "generatedAt" : "2024-12-05T17:13:43.355636"
+                          "generatedAt" : "2024-12-19T16:35:56.081975"
                         }, {
                           "postId" : 108,
+                          "authorId" : 12,
+                          "authorNickname" : "nickname",
+                          "authorProfileUrl" : "authorProfileUrl",
                           "jobName" : "BACK_END",
                           "jobNameKorean" : "백엔드",
                           "content" : "This is test post content 9.",
@@ -1529,9 +1895,12 @@ paths:
                           "interview" : null,
                           "evaluation" : null,
                           "postType" : "POST",
-                          "generatedAt" : "2024-12-05T17:13:43.355639"
+                          "generatedAt" : "2024-12-19T16:35:56.081977"
                         }, {
                           "postId" : 109,
+                          "authorId" : 12,
+                          "authorNickname" : "nickname",
+                          "authorProfileUrl" : "authorProfileUrl",
                           "jobName" : "BACK_END",
                           "jobNameKorean" : "백엔드",
                           "content" : "This is test post content 10.",
@@ -1539,7 +1908,7 @@ paths:
                           "interview" : null,
                           "evaluation" : null,
                           "postType" : "POST",
-                          "generatedAt" : "2024-12-05T17:13:43.355641"
+                          "generatedAt" : "2024-12-19T16:35:56.081978"
                         } ],
                         "currentPage" : 0,
                         "isLastPage" : true
@@ -1558,7 +1927,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/post-user-916831548'
+                $ref: '#/components/schemas/post-user-617474001'
               examples:
                 유저가 작성한 게시글 목록 조회 - 성공:
                   value: |-
@@ -1568,6 +1937,9 @@ paths:
                       "data" : {
                         "posts" : [ {
                           "postId" : 100,
+                          "authorId" : 12,
+                          "authorNickname" : "nickname",
+                          "authorProfileUrl" : "authorProfileUrl",
                           "jobName" : "BACK_END",
                           "jobNameKorean" : "백엔드",
                           "content" : "This is a test post content.",
@@ -1610,6 +1982,7 @@ paths:
                               "answerEvaluationId" : 1,
                               "questionText" : "What is your greatest strength?",
                               "answerText" : "I am highly adaptable.",
+                              "answerS3PresignedUrl" : "https://www.bucket.com",
                               "answerFeedbackStrength" : "Good emphasis on adaptability.",
                               "answerFeedbackImprovement" : "Could elaborate more.",
                               "answerFeedbackSuggestion" : "Provide an example of adaptability.",
@@ -1629,9 +2002,12 @@ paths:
                             } ]
                           },
                           "postType" : "EVALUATION",
-                          "generatedAt" : "2024-12-05T17:13:43.403128"
+                          "generatedAt" : "2024-12-19T16:35:56.127367"
                         }, {
                           "postId" : 108,
+                          "authorId" : 12,
+                          "authorNickname" : "nickname",
+                          "authorProfileUrl" : "authorProfileUrl",
                           "jobName" : "BACK_END",
                           "jobNameKorean" : "백엔드",
                           "content" : "This is a test post content.",
@@ -1659,9 +2035,12 @@ paths:
                           },
                           "evaluation" : null,
                           "postType" : "INTERVIEW",
-                          "generatedAt" : "2024-12-05T17:13:43.403135"
+                          "generatedAt" : "2024-12-19T16:35:56.127371"
                         }, {
                           "postId" : 132,
+                          "authorId" : 12,
+                          "authorNickname" : "nickname",
+                          "authorProfileUrl" : "authorProfileUrl",
                           "jobName" : "BACK_END",
                           "jobNameKorean" : "백엔드",
                           "content" : "This is a test post content.",
@@ -1669,7 +2048,7 @@ paths:
                           "interview" : null,
                           "evaluation" : null,
                           "postType" : "POST",
-                          "generatedAt" : "2024-12-05T17:13:43.403137"
+                          "generatedAt" : "2024-12-19T16:35:56.127372"
                         } ]
                       }
                     }
@@ -1748,7 +2127,7 @@ paths:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/question-completion-1208582907'
+              $ref: '#/components/schemas/question-completion-1381712675'
             examples:
               파이썬 요청 - 질문 목록 생성 완료 - 성공:
                 value: |-
@@ -1756,7 +2135,6 @@ paths:
                     "user_id" : 1,
                     "interview_id" : 1,
                     "questions" : [ {
-                      "question_id" : 1,
                       "question" : {
                         "question_text" : "question_text",
                         "s3_audio_url" : "s3_audio_url",
@@ -1766,7 +2144,6 @@ paths:
                       "question_intent" : "question_intent",
                       "key_terms" : [ ]
                     }, {
-                      "question_id" : 2,
                       "question" : {
                         "question_text" : "question_text",
                         "s3_audio_url" : "s3_audio_url",
@@ -1776,7 +2153,6 @@ paths:
                       "question_intent" : "question_intent",
                       "key_terms" : [ ]
                     }, {
-                      "question_id" : 3,
                       "question" : {
                         "question_text" : "question_text",
                         "s3_audio_url" : "s3_audio_url",
@@ -1808,17 +2184,46 @@ paths:
       - Question API
       summary: 질문 API
       description: 질문 API
-      operationId: 질문 요청 - 최초 요청(
+      operationId: '질문 '
       requestBody:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/question-initial-question-1423203476'
+              $ref: '#/components/schemas/question722681444'
             examples:
+              질문 생성 - 최초 요청(모의 면접 성공):
+                value: |-
+                  {
+                    "interviewId" : 1,
+                    "interviewTitle" : "면접 제목",
+                    "interviewStatus" : "FILE_UPLOADED",
+                    "interviewType" : "TECHNICAL",
+                    "interviewMethod" : "CHAT",
+                    "interviewMode" : "GENERAL",
+                    "questionCount" : 3,
+                    "files" : [ ],
+                    "jobId" : 1
+                  }
               질문 요청 - 최초 요청(실전 면접 성공):
                 value: |-
                   {
                     "interviewId" : 1
+                  }
+              질문 생성 - 최초 요청(실전 면접 성공):
+                value: |-
+                  {
+                    "interviewId" : 1,
+                    "interviewTitle" : "면접 제목",
+                    "interviewStatus" : "FILE_UPLOADED",
+                    "interviewType" : "TECHNICAL",
+                    "interviewMethod" : "CHAT",
+                    "interviewMode" : "REAL",
+                    "questionCount" : 5,
+                    "files" : [ {
+                      "type" : "COVER_LETTER",
+                      "filePath" : "cover_letter_s3_url/file_name"
+                    } ],
+                    "jobId" : 1
                   }
               질문 요청 - 최초 요청(모의 면접 성공):
                 value: |-
@@ -1833,7 +2238,67 @@ paths:
               schema:
                 $ref: '#/components/schemas/question-initial-question-1924271710'
               examples:
+                질문 생성 - 최초 요청(모의 면접 성공):
+                  value: |-
+                    {
+                      "code" : 200,
+                      "message" : "SUCCESS",
+                      "data" : {
+                        "interview" : {
+                          "interviewId" : 1,
+                          "interviewTitle" : "면접 제목",
+                          "interviewStatus" : "FILE_UPLOADED",
+                          "interviewType" : "TECHNICAL",
+                          "interviewMethod" : "CHAT",
+                          "interviewMode" : "GENERAL",
+                          "questionCount" : 3,
+                          "job" : {
+                            "jobId" : 1,
+                            "jobName" : "BACK_END",
+                            "jobNameKorean" : "백엔드",
+                            "jobDescription" : "백엔드 직무입니다."
+                          }
+                        },
+                        "currentQuestionId" : 1,
+                        "currentQuestionText" : "스타크래프트를 처음으로 접한 경험을 통해 어떻게 최고를 목표로 삼고 성취했는지 이야기해보세요.",
+                        "currentQuestionS3AudioUrl" : "",
+                        "nextQuestionId" : 2,
+                        "nextQuestionText" : "스타크래프트를 처음으로 접한 경험을 통해 어떻게 최고를 목표로 삼고 성취했는지 이야기해보세요2.",
+                        "nextQuestionS3AudioUrl" : "",
+                        "hasNext" : true
+                      }
+                    }
                 질문 요청 - 최초 요청(실전 면접 성공):
+                  value: |-
+                    {
+                      "code" : 200,
+                      "message" : "SUCCESS",
+                      "data" : {
+                        "interview" : {
+                          "interviewId" : 1,
+                          "interviewTitle" : "면접 제목",
+                          "interviewStatus" : "FILE_UPLOADED",
+                          "interviewType" : "TECHNICAL",
+                          "interviewMethod" : "CHAT",
+                          "interviewMode" : "REAL",
+                          "questionCount" : 5,
+                          "job" : {
+                            "jobId" : 1,
+                            "jobName" : "BACK_END",
+                            "jobNameKorean" : "백엔드",
+                            "jobDescription" : "백엔드 직무입니다."
+                          }
+                        },
+                        "currentQuestionId" : 1,
+                        "currentQuestionText" : "스타크래프트를 처음으로 접한 경험을 통해 어떻게 최고를 목표로 삼고 성취했는지 이야기해보세요.",
+                        "currentQuestionS3AudioUrl" : "",
+                        "nextQuestionId" : 2,
+                        "nextQuestionText" : "다음 질문입니다.",
+                        "nextQuestionS3AudioUrl" : "",
+                        "hasNext" : true
+                      }
+                    }
+                질문 생성 - 최초 요청(실전 면접 성공):
                   value: |-
                     {
                       "code" : 200,
@@ -1991,7 +2456,7 @@ paths:
                         "subscriptionId" : 1,
                         "userId" : 1,
                         "jobId" : 2,
-                        "subscribedAt" : "2024-12-05T17:13:45.512984"
+                        "subscribedAt" : "2024-12-19T16:35:58.225611"
                       }
                     }
   /subscription/user:
@@ -2018,12 +2483,12 @@ paths:
                         "subscriptionId" : 1,
                         "userId" : 1,
                         "jobId" : 2,
-                        "subscribedAt" : "2024-12-05T17:13:45.499873"
+                        "subscribedAt" : "2024-12-19T16:35:58.213236"
                       }, {
                         "subscriptionId" : 2,
                         "userId" : 1,
                         "jobId" : 3,
-                        "subscribedAt" : "2024-12-05T17:13:45.499878"
+                        "subscribedAt" : "2024-12-19T16:35:58.213243"
                       } ]
                     }
   /subscription/{subscriptionId}:
@@ -2083,7 +2548,7 @@ paths:
                           "interviewAssetType" : "CHAT",
                           "interviewAssetTypeKorean" : "채팅",
                           "description" : "실전 채팅 면접 충전",
-                          "generatedAt" : "2024-12-05T17:13:46.389476"
+                          "generatedAt" : "2024-12-19T16:35:59.211526"
                         }, {
                           "ticketTransactionId" : 2,
                           "amount" : 1,
@@ -2096,7 +2561,7 @@ paths:
                           "interviewAssetType" : "CHAT",
                           "interviewAssetTypeKorean" : "채팅",
                           "description" : "실전 채팅 면접 사용",
-                          "generatedAt" : "2024-12-05T17:13:46.389481"
+                          "generatedAt" : "2024-12-19T16:35:59.211531"
                         }, {
                           "ticketTransactionId" : 3,
                           "amount" : 1,
@@ -2109,7 +2574,7 @@ paths:
                           "interviewAssetType" : "CHAT",
                           "interviewAssetTypeKorean" : "채팅",
                           "description" : "실전 채팅 면접 충전",
-                          "generatedAt" : "2024-12-05T17:13:46.389482"
+                          "generatedAt" : "2024-12-19T16:35:59.211532"
                         }, {
                           "ticketTransactionId" : 4,
                           "amount" : 2,
@@ -2122,7 +2587,7 @@ paths:
                           "interviewAssetType" : "VOICE",
                           "interviewAssetTypeKorean" : "음성",
                           "description" : "실전 채팅 면접 충전",
-                          "generatedAt" : "2024-12-05T17:13:46.389483"
+                          "generatedAt" : "2024-12-19T16:35:59.211533"
                         }, {
                           "ticketTransactionId" : 5,
                           "amount" : 3,
@@ -2135,7 +2600,7 @@ paths:
                           "interviewAssetType" : "CHAT",
                           "interviewAssetTypeKorean" : "채팅",
                           "description" : "모의 채팅 면접 충전",
-                          "generatedAt" : "2024-12-05T17:13:46.389484"
+                          "generatedAt" : "2024-12-19T16:35:59.211535"
                         }, {
                           "ticketTransactionId" : 6,
                           "amount" : 4,
@@ -2148,7 +2613,7 @@ paths:
                           "interviewAssetType" : "VOICE",
                           "interviewAssetTypeKorean" : "음성",
                           "description" : "모의 음성 면접 충전",
-                          "generatedAt" : "2024-12-05T17:13:46.389486"
+                          "generatedAt" : "2024-12-19T16:35:59.211537"
                         } ]
                       }
                     }
@@ -2186,7 +2651,8 @@ paths:
       - User API
       summary: 현재 사용자 인증 상태 확인
       description: 현재 사용자 인증 상태 확인
-      operationId: '로그인 여부 확인 - 인증 '
+      operationId: authenticated - 인증 실패 (토큰 없음)로그인 여부 확인 - 인증 상태 확인 성공로그인 여부 확인 -
+        인증 실패 (토큰 없음)
       responses:
         "200":
           description: "200"
@@ -2195,6 +2661,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/user-authenticated2056040670'
               examples:
+                authenticated - 인증 실패 (토큰 없음):
+                  value: |-
+                    {
+                      "code" : 200,
+                      "message" : "SUCCESS",
+                      "data" : false
+                    }
                 로그인 여부 확인 - 인증 상태 확인 성공:
                   value: |-
                     {
@@ -2294,13 +2767,23 @@ paths:
       - User API
       summary: 유저 API
       description: 유저 API
-      operationId: 유저 정보 생성 - 성공
+      operationId: '유저 정보 '
       requestBody:
         content:
           application/json;charset=UTF-8:
             schema:
               $ref: '#/components/schemas/user-info-1151009706'
             examples:
+              유저 정보 업데이트 - 성공:
+                value: |-
+                  {
+                    "s3ProfileImageObjectKey" : "https://example.com/image.jpg",
+                    "name" : "김수현",
+                    "username" : "suhyun",
+                    "nickname" : "dodam",
+                    "birthdate" : "1990-01-01",
+                    "gender" : "WOMAN"
+                  }
               유저 정보 생성 - 성공:
                 value: |-
                   {
@@ -2319,6 +2802,24 @@ paths:
               schema:
                 $ref: '#/components/schemas/user-info-2054075560'
               examples:
+                유저 정보 업데이트 - 성공:
+                  value: |-
+                    {
+                      "code" : 200,
+                      "message" : "SUCCESS",
+                      "data" : {
+                        "userId" : 1,
+                        "socialId" : "12345",
+                        "email" : "example@test.com",
+                        "username" : "suhyun",
+                        "name" : "김수현",
+                        "nickname" : "dodam",
+                        "s3ProfileImageUrl" : "https://example.com/image.jpg",
+                        "leave" : false,
+                        "gender" : "WOMAN",
+                        "birthdate" : "1990-01-01"
+                      }
+                    }
                 유저 정보 생성 - 성공:
                   value: |-
                     {
@@ -2337,6 +2838,21 @@ paths:
                         "birthdate" : "1990-01-01"
                       }
                     }
+  /user/logout:
+    post:
+      tags:
+      - user
+      operationId: 로그아웃 - 성공
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/user-logout486549215'
+              examples:
+                로그아웃 - 성공:
+                  value: Logged out successfully
   /user/my-page:
     get:
       tags:
@@ -2417,7 +2933,7 @@ paths:
                     }
 components:
   schemas:
-    file-cover-letter-fileName-upload-url-1617557868:
+    post-search1283205629:
       type: object
       properties:
         code:
@@ -2426,18 +2942,69 @@ components:
         data:
           type: object
           properties:
-            preSignedUrl:
-              type: string
-              description: aws s3 PreSigned Url
+            isLastPage:
+              type: boolean
+              description: 마지막 페이지 여부
+            currentPage:
+              type: number
+              description: 현재 페이지 번호
+            posts:
+              type: array
+              description: 게시글 목록
+              items:
+                type: object
+                properties:
+                  jobName:
+                    type: string
+                    description: 직무 이름
+                  postType:
+                    type: string
+                    description: 게시글 유형
+                  generatedAt:
+                    type: string
+                    description: 작성 일시
+                  jobNameKorean:
+                    type: string
+                    description: 직무 이름 (한글)
+                  s3ImageUrl:
+                    type: string
+                    description: S3 이미지 URL
+                  postId:
+                    type: number
+                    description: 게시글 식별자
+                  authorProfileUrl:
+                    type: string
+                    description: 작성자 프로필 이미지 URL
+                  authorNickname:
+                    type: string
+                    description: 작성자 닉네임
+                  authorId:
+                    type: number
+                    description: 작성자 식별자
+                  content:
+                    type: string
+                    description: 게시글 내용
         message:
           type: string
           description: 응답 메시지
-    question-initial-question-1423203476:
+    file-audio-interviewId-questionId-download-url-37488830:
       type: object
       properties:
-        interviewId:
+        code:
           type: number
-          description: 면접 식별자
+          description: 응답 코드
+        data:
+          type: object
+          properties:
+            objectKey:
+              type: string
+              description: aws s3 object key
+            preSignedUrl:
+              type: string
+              description: AWS S3 PreSigned URL
+        message:
+          type: string
+          description: 응답 메시지
     question-next-question193040009:
       type: object
       properties:
@@ -2508,48 +3075,6 @@ components:
             currentQuestionS3AudioUrl:
               type: string
               description: 현재 질문 음성 파일 주소
-        message:
-          type: string
-          description: 응답 메시지
-    user-info-2054075560:
-      type: object
-      properties:
-        code:
-          type: number
-          description: 응답 코드
-        data:
-          type: object
-          properties:
-            birthdate:
-              type: string
-              description: 생년월일
-            gender:
-              type: string
-              description: 성별
-            leave:
-              type: boolean
-              description: 탈퇴 여부
-            socialId:
-              type: string
-              description: 소셜 ID
-            nickname:
-              type: string
-              description: 유저 닉네임
-            name:
-              type: string
-              description: 유저 이름
-            s3ProfileImageUrl:
-              type: string
-              description: 프로필 이미지 URL
-            userId:
-              type: number
-              description: 유저 ID
-            email:
-              type: string
-              description: 이메일
-            username:
-              type: string
-              description: 유저네임
         message:
           type: string
           description: 응답 메시지
@@ -2645,136 +3170,7 @@ components:
         message:
           type: string
           description: 응답 메시지
-    interview1916977939:
-      type: object
-      properties:
-        code:
-          type: number
-          description: "응답 코드: 400"
-        data:
-          type: string
-          description: "에러 메시지: {누락된 필드}: {누락된 필드} is required"
-        message:
-          type: string
-          description: "응답 상태: BAD_REQUEST"
-    comment-commentId1745625053:
-      type: object
-      properties:
-        code:
-          type: number
-          description: 응답 코드
-        data:
-          type: object
-          properties:
-            count:
-              type: number
-              description: 삭제된 댓글 개수
-            message:
-              type: string
-              description: 댓글 삭제 안내문("댓글이 삭제되었습니다."
-        message:
-          type: string
-          description: 응답 메시지
-    user-authenticated2056040670:
-      type: object
-      properties:
-        code:
-          type: number
-          description: 응답 코드
-        data:
-          type: boolean
-          description: "인증 여부 (true: 인증됨, false: 인증되지 않음)"
-        message:
-          type: string
-          description: 응답 메시지
-    post-search2107435791:
-      type: object
-      properties:
-        code:
-          type: number
-          description: 응답 코드
-        data:
-          type: object
-          properties:
-            isLastPage:
-              type: boolean
-              description: 마지막 페이지 여부
-            currentPage:
-              type: number
-              description: 현재 페이지 번호
-            posts:
-              type: array
-              description: 게시글 목록
-              items:
-                type: object
-                properties:
-                  jobName:
-                    type: string
-                    description: 직무 이름
-                  postType:
-                    type: string
-                    description: 게시글 유형
-                  generatedAt:
-                    type: string
-                    description: 작성 일시
-                  jobNameKorean:
-                    type: string
-                    description: 직무 이름 (한글)
-                  s3ImageUrl:
-                    type: string
-                    description: S3 이미지 URL
-                  postId:
-                    type: number
-                    description: 게시글 식별자
-                  content:
-                    type: string
-                    description: 게시글 내용
-        message:
-          type: string
-          description: 응답 메시지
-    comment-804990832:
-      type: object
-      properties:
-        code:
-          type: number
-          description: 응답 코드
-        data:
-          type: object
-          properties:
-            generatedAt:
-              type: string
-              description: 댓글 작성 일시
-            commentId:
-              type: number
-              description: 댓글 식별자
-            comment:
-              type: string
-              description: 댓글 내용
-            postId:
-              type: number
-              description: 게시글 식별자
-        message:
-          type: string
-          description: 응답 메시지
-    user-info315043345:
-      type: object
-      properties:
-        s3ProfileImageObjectKey:
-          type: string
-          description: 프로필 이미지 오브젝트 키
-        birthdate:
-          type: string
-          description: 생년월일
-        gender:
-          type: string
-          description: 성별
-        nickname:
-          type: string
-          description: 유저 닉네임
-        name:
-          type: string
-          description: 유저 이름
-    evaluation-interviewId-330994788:
+    evaluation-interviewId-1124488599:
       type: object
       properties:
         code:
@@ -2788,6 +3184,9 @@ components:
               items:
                 type: object
                 properties:
+                  answerS3PresignedUrl:
+                    type: string
+                    description: 답변 텍스트 음성 url
                   answerEvaluationId:
                     type: number
                     description: 답변 평가 식별자
@@ -2894,6 +3293,39 @@ components:
         message:
           type: string
           description: 응답 메시지
+    file-cover-letter-412892686:
+      type: object
+      properties:
+        filePath:
+          type: string
+          description: s3 파일 경로
+        type:
+          type: string
+          description: "자소서 타입: COVER_LETTER"
+    comment-804990832:
+      type: object
+      properties:
+        code:
+          type: number
+          description: 응답 코드
+        data:
+          type: object
+          properties:
+            generatedAt:
+              type: string
+              description: 댓글 작성 일시
+            commentId:
+              type: number
+              description: 댓글 식별자
+            comment:
+              type: string
+              description: 댓글 내용
+            postId:
+              type: number
+              description: 게시글 식별자
+        message:
+          type: string
+          description: 응답 메시지
     user-info983662776:
       type: object
       properties:
@@ -2936,161 +3368,13 @@ components:
         message:
           type: string
           description: 응답 메시지
-    coupon-1296136601:
-      type: object
-      properties:
-        code:
-          type: number
-          description: 응답 코드
-        data:
-          type: object
-          properties:
-            couponName:
-              type: string
-              description: 쿠폰 이름
-            interviewAssetTypeKorean:
-              type: string
-              description: 쿠폰 유형 한글
-            expireAt:
-              type: string
-              description: 쿠폰 만료 일시
-            interviewModeKorean:
-              type: string
-              description: 쿠폰 면접 유형 한글
-            couponId:
-              type: number
-              description: 쿠폰 식별자
-            userId:
-              type: number
-              description: 쿠폰 발급 받은 회원 식별자
-            isUsed:
-              type: boolean
-              description: "쿠폰 사용 여부: 사용(true), 미사용(false)"
-            interviewMode:
-              type: string
-              description: "쿠폰 면접 유형: REAL(실전), GENERAL(모의)"
-            interviewAssetType:
-              type: string
-              description: 쿠폰 유형
-            generatedAt:
-              type: string
-              description: 쿠폰 생성 일시
-            chargeAmount:
-              type: number
-              description: 쿠폰으로 충전 가능한 이용권 장 수
-            isExpired:
-              type: boolean
-              description: "쿠폰 만료 여부: 만료(true), 만료 전(false)"
-        message:
-          type: string
-          description: 응답 메시지
     subscription-2024782262:
       type: object
       properties:
         jobId:
           type: number
           description: 직무 ID
-    comment-author-commentAuthorId-1237191268:
-      type: object
-      properties:
-        code:
-          type: number
-          description: 응답 코드
-        data:
-          type: object
-          properties:
-            comments:
-              type: array
-              items:
-                type: object
-                properties:
-                  generatedAt:
-                    type: string
-                    description: 댓글 작성 일시
-                  commentId:
-                    type: number
-                    description: 댓글 식별자
-                  comment:
-                    type: string
-                    description: 댓글 내용
-                  postId:
-                    type: number
-                    description: 게시글 식별자
-        message:
-          type: string
-          description: 응답 메시지
-    interview-902124313:
-      type: object
-      properties:
-        code:
-          type: number
-          description: 응답 코드
-        data:
-          type: object
-          properties:
-            interviews:
-              type: array
-              items:
-                type: object
-                properties:
-                  questionCount:
-                    type: number
-                    description: 면접 질문 개수
-                  interviewStatus:
-                    type: string
-                    description: 면접 상태
-                  interviewId:
-                    type: number
-                    description: 면접 식별자
-                  interviewType:
-                    type: string
-                    description: 면접 유형
-                  interviewTitle:
-                    type: string
-                    description: 면접 제목
-                  interviewMethod:
-                    type: string
-                    description: 면접 방식
-                  files:
-                    type: array
-                    description: 파일 목록
-                    items:
-                      type: object
-                      properties:
-                        fileName:
-                          type: string
-                          description: 파일 이름
-                        s3FileUrl:
-                          type: string
-                          description: 파일 경로
-                        type:
-                          type: string
-                          description: 파일 유형
-                        fileId:
-                          type: number
-                          description: 파일 식별자
-                  job:
-                    type: object
-                    properties:
-                      jobName:
-                        type: string
-                        description: 직무 이름
-                      jobId:
-                        type: number
-                        description: 직무 식별자
-                      jobNameKorean:
-                        type: string
-                        description: 직무 이름 (한글)
-                      jobDescription:
-                        type: string
-                        description: 직무 설명
-                  interviewMode:
-                    type: string
-                    description: 면접 모드
-        message:
-          type: string
-          description: 응답 메시지
-    post-user-916831548:
+    post-user-617474001:
       type: object
       properties:
         code:
@@ -3112,6 +3396,9 @@ components:
                         items:
                           type: object
                           properties:
+                            answerS3PresignedUrl:
+                              type: string
+                              description: 답변 텍스트 음성 url
                             answerEvaluationId:
                               type: number
                               description: 답변 평가 식별자
@@ -3242,6 +3529,15 @@ components:
                   postId:
                     type: number
                     description: 게시글 식별자
+                  authorProfileUrl:
+                    type: string
+                    description: 작성자 프로필 이미지 URL
+                  authorNickname:
+                    type: string
+                    description: 작성자 닉네임
+                  authorId:
+                    type: number
+                    description: 작성자 식별자
                   interview:
                     type: object
                     properties:
@@ -3305,23 +3601,6 @@ components:
         message:
           type: string
           description: 응답 메시지
-    file-cover-letter-interviewId-fileName-upload-url1961583156:
-      type: object
-      properties:
-        code:
-          type: number
-          description: 응답 코드
-        data:
-          type: object
-          properties:
-            preSignedUrl:
-              type: string
-              description: aws s3 preSigned Url
-        message:
-          type: string
-          description: 응답 메시지
-    ping-pong486549215:
-      type: object
     coupon-user-expired-776800366:
       type: object
       properties:
@@ -3366,15 +3645,73 @@ components:
         message:
           type: string
           description: 응답 메시지
-    comment-700929826:
+    interview1204019169:
       type: object
       properties:
-        comment:
-          type: string
-          description: 댓글 내용
-        postId:
+        code:
           type: number
-          description: 게시글 식별자
+          description: 응답 코드
+        data:
+          type: object
+          properties:
+            questionCount:
+              type: number
+              description: 면접 질문 개수
+            interviewStatus:
+              type: string
+              description: "면접 상태: INITIAL(최초 정보 입력 상태), FILE_UPLOADED(자소서 및 파일 업로\
+                드 완료 상태), WAITING_FOR_QUESTION(질문 생성 요청 후 대기 상태), (READY면접 시작 가능 상\
+                태), IN_PROGRESS(면접 진행 중 상태), WAITING_FOR_FEEDBACK(피드백 생성 요청 후 대기 상\
+                태), COMPLETED(피드백 완료 상태)"
+            interviewId:
+              type: number
+              description: 면접 식별자
+            file:
+              type: object
+              properties:
+                fileName:
+                  type: string
+                  description: 파일 이름
+                s3FileUrl:
+                  type: string
+                  description: 파일 경로
+                type:
+                  type: string
+                  description: "파일 유형: COVER_LETTER, RESUME, PORTFOLIO"
+                fileId:
+                  type: number
+                  description: 파일 식별자
+            interviewType:
+              type: string
+              description: "면접 유형: TECHNICAL(기술 면접), PERSONAL(인성 면접)"
+            interviewTitle:
+              type: string
+              description: 면접 제목
+            interviewMethod:
+              type: string
+              description: "면접 방식: CHAT(채팅 면접), VOICE(음성 면접), VIDEO(영상 면접)"
+            job:
+              type: object
+              properties:
+                jobName:
+                  type: string
+                  description: "직무 이름: BACK_END(백엔드), FRONT_END(프론트엔드), INFRA(인프라\
+                    ), AI(인공지능)"
+                jobId:
+                  type: number
+                  description: 직무 식별자
+                jobNameKorean:
+                  type: string
+                  description: "직무 이름: 백엔드, 프론트엔드, 인프라, 인공지능"
+                jobDescription:
+                  type: string
+                  description: 직무 설명
+            interviewMode:
+              type: string
+              description: "면접 모드: REAL(실전 면접 모드), GENERAL(일반/모의 면접 모드)"
+        message:
+          type: string
+          description: 응답 메시지
     interview-1383529810:
       type: object
       properties:
@@ -3501,216 +3838,6 @@ components:
         message:
           type: string
           description: 응답 메시지
-    post-1902421517:
-      type: object
-      properties:
-        code:
-          type: number
-          description: 응답 코드
-        data:
-          type: object
-          properties:
-            evaluation:
-              type: object
-              properties:
-                answerEvaluations:
-                  type: array
-                  items:
-                    type: object
-                    properties:
-                      answerEvaluationId:
-                        type: number
-                        description: 답변 평가 식별자
-                      answerFeedbackImprovement:
-                        type: string
-                        description: 답변 개선 피드백
-                      answerFeedbackSuggestion:
-                        type: string
-                        description: 답변 제안 피드백
-                      answerText:
-                        type: string
-                        description: 답변 텍스트
-                      answerEvaluationScores:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            answerEvaluationType:
-                              type: string
-                              description: "답변 평가 유형(TEXT, VOICE, VIDEO"
-                            score:
-                              type: number
-                              description: 답변 평가 점수
-                            answerEvaluationScoreId:
-                              type: number
-                              description: 답변 평가 점수 식별자
-                            answerEvaluationScoreName:
-                              type: string
-                              description: 답변 평가 점수 이름
-                            rationale:
-                              type: string
-                              description: 답변 평가 점수 근거
-                      questionText:
-                        type: string
-                        description: 질문 텍스트
-                      answerFeedbackStrength:
-                        type: string
-                        description: 답변 강점 피드백
-                evaluationCriteria:
-                  type: array
-                  items:
-                    type: object
-                    properties:
-                      feedbackText:
-                        type: string
-                        description: 평가 피드백 텍스트
-                      score:
-                        type: number
-                        description: 평가 점수
-                      evaluationCriteria:
-                        type: string
-                        description: 평가 기준
-                      evaluationCriteriaId:
-                        type: number
-                        description: 평가 기준 식별자
-                interview:
-                  type: object
-                  properties:
-                    questionCount:
-                      type: number
-                      description: 질문 개수
-                    interviewStatus:
-                      type: string
-                      description: 면접 상태
-                    interviewId:
-                      type: number
-                      description: 면접 식별자
-                    interviewType:
-                      type: string
-                      description: 면접 유형
-                    interviewTitle:
-                      type: string
-                      description: 면접 제목
-                    interviewMethod:
-                      type: string
-                      description: 면접 방식
-                    files:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          fileName:
-                            type: string
-                            description: 파일 이름
-                          s3FileUrl:
-                            type: string
-                            description: S3 파일 URL
-                          type:
-                            type: string
-                            description: "파일 유형 (예: COVER_LETTER)"
-                          fileId:
-                            type: number
-                            description: 파일 식별자
-                    job:
-                      type: object
-                      properties:
-                        jobName:
-                          type: string
-                          description: 직무 이름
-                        jobId:
-                          type: number
-                          description: 직무 식별자
-                        jobNameKorean:
-                          type: string
-                          description: 직무 이름 (한글)
-                        jobDescription:
-                          type: string
-                          description: 직무 설명
-                    interviewMode:
-                      type: string
-                      description: 면접 모드
-              description: 일반 게시글 작성에서는 평가 정보 없음
-            jobName:
-              type: string
-              description: 직무 이름
-            postType:
-              type: string
-              description: "게시글 유형 (EVALUATION, INTERVIEW, POST)"
-            generatedAt:
-              type: string
-              description: 작성 일시
-            jobNameKorean:
-              type: string
-              description: 직무 이름 (한글)
-            s3ImageUrl:
-              type: string
-              description: S3 이미지 URL
-            postId:
-              type: number
-              description: 게시글 식별자
-            interview:
-              type: object
-              properties:
-                questionCount:
-                  type: number
-                  description: 질문 개수
-                interviewStatus:
-                  type: string
-                  description: 면접 상태
-                interviewId:
-                  type: number
-                  description: 면접 식별자
-                interviewType:
-                  type: string
-                  description: 면접 유형
-                interviewTitle:
-                  type: string
-                  description: 면접 제목
-                interviewMethod:
-                  type: string
-                  description: 면접 방식
-                files:
-                  type: array
-                  items:
-                    type: object
-                    properties:
-                      fileName:
-                        type: string
-                        description: 파일 이름
-                      s3FileUrl:
-                        type: string
-                        description: S3 파일 URL
-                      type:
-                        type: string
-                        description: "파일 유형 (예: COVER_LETTER)"
-                      fileId:
-                        type: number
-                        description: 파일 식별자
-                job:
-                  type: object
-                  properties:
-                    jobName:
-                      type: string
-                      description: 직무 이름
-                    jobId:
-                      type: number
-                      description: 직무 식별자
-                    jobNameKorean:
-                      type: string
-                      description: 직무 이름 (한글)
-                    jobDescription:
-                      type: string
-                      description: 직무 설명
-                interviewMode:
-                  type: string
-                  description: 면접 모드
-              description: 평가 공유 게시글 작성에서는 인터뷰 정보 없음
-            content:
-              type: string
-              description: 게시글 내용
-        message:
-          type: string
-          description: 응답 메시지
     interview1164644930:
       type: object
       properties:
@@ -3785,34 +3912,10 @@ components:
         message:
           type: string
           description: 응답 메시지
-    question-next-question-985830319:
+    evaluation-completion1346081302:
       type: object
       properties:
-        interviewId:
-          type: number
-          description: 면접 식별자
-        answer:
-          type: object
-          properties:
-            answerText:
-              type: string
-              description: 이전 질문에 대한 답변
-            s3AudioUrl:
-              type: string
-              description: 답변 오디오 s3 저장 url
-            s3VideoUrl:
-              type: string
-              description: 답변 비디오 s3 저장 url
-        answerQuestionId:
-          type: number
-          description: 전달되는 답변에 대한 질문 식별자
-        nextQuestionId:
-          type: number
-          description: 반환해줘야 하는 다음 질문 식별자
-    evaluation-completion-1670790523:
-      type: object
-      properties:
-        overallEvaluation:
+        overall_evaluation:
           type: object
           properties:
             voice_overall:
@@ -3884,12 +3987,635 @@ components:
                     rationale:
                       type: string
                       description: 텍스트 직무 적합도 평가 내용
+        user_id:
+          type: number
+          description: 유저 식별자
+        interview_id:
+          type: number
+          description: 면접 식별자
+    post-881832127:
+      type: object
+      properties:
+        overallEvaluationId:
+          type: number
+          description: 종합 평가 식별자
         interviewId:
           type: number
           description: 면접 식별자
-        userId:
+        jobKoreanName:
+          type: string
+          description: 직무 이름 (한글)
+        postType:
+          type: string
+          description: "게시글 유형 (EVALUATION, INTERVIEW, POST)"
+        s3ImageUrl:
+          type: string
+          description: S3 이미지 URL
+        content:
+          type: string
+          description: 게시글 내용
+    interview851286540:
+      type: object
+      properties:
+        interviewId:
           type: number
-          description: 유저 식별자
+          description: 면접 식별자
+        coverLetter:
+          type: object
+          properties:
+            filePath:
+              type: string
+              description: s3 업로드 object key
+            type:
+              type: string
+              description: "면접 파일 유형: COVER_LETTER"
+    user-info-1151009706:
+      type: object
+      properties:
+        s3ProfileImageObjectKey:
+          type: string
+          description: 프로필 이미지 오브젝트 키
+        birthdate:
+          type: string
+          description: 생년월일
+        gender:
+          type: string
+          description: 성별
+        nickname:
+          type: string
+          description: 유저 닉네임
+        name:
+          type: string
+          description: 유저 이름
+        username:
+          type: string
+          description: 유저네임
+    coupon-user-used-1865178528:
+      type: object
+      properties:
+        code:
+          type: number
+          description: 응답 코드
+        data:
+          type: object
+          properties:
+            coupons:
+              type: array
+              items:
+                type: object
+                properties:
+                  couponName:
+                    type: string
+                    description: 쿠폰 이름
+                  interviewAssetTypeKorean:
+                    type: string
+                    description: "이용권 유형 한글(채팅, 음성)"
+                  usedAt:
+                    type: string
+                    description: 사용 일시
+                  chargeAmount:
+                    type: number
+                    description: 쿠폰 사용 시 충전 가능 이용권 수량
+                  interviewModeKorean:
+                    type: string
+                    description: "면접 모드 한글(실전, 모의)"
+                  couponId:
+                    type: number
+                    description: 쿠폰 식별자
+        message:
+          type: string
+          description: 응답 메시지
+    interview-interviewId-owner1484301643:
+      type: object
+      properties:
+        code:
+          type: number
+          description: 응답 코드
+        data:
+          type: boolean
+          description: "소유 여부 (true: 소유자, false: 소유자가 아님)"
+        message:
+          type: string
+          description: 응답 메시지
+    coupon-use942495257:
+      type: object
+      properties:
+        code:
+          type: number
+          description: 응답 코드
+        data:
+          type: object
+          properties:
+            usedCouponInfo:
+              type: object
+              properties:
+                couponName:
+                  type: string
+                  description: 사용된 쿠폰 이름
+                interviewAssetTypeKorean:
+                  type: string
+                  description: 사용된 쿠폰 유형 한글
+                expireAt:
+                  type: string
+                  description: 쿠폰 만료 일시
+                interviewModeKorean:
+                  type: string
+                  description: 사용된 쿠폰 면접 모드 한글
+                couponId:
+                  type: number
+                  description: 사용된 쿠폰 식별자
+                userId:
+                  type: number
+                  description: 쿠폰을 사용한 회원 식별자
+                isUsed:
+                  type: boolean
+                  description: "쿠폰 사용 여부: 사용(true), 미사용(false)"
+                interviewMode:
+                  type: string
+                  description: "사용된 쿠폰 면접 모드: REAL(실전), GENERAL(모의)"
+                interviewAssetType:
+                  type: string
+                  description: "사용된 쿠폰 유형: CHAT(채팅), VOICE(음성)"
+                generatedAt:
+                  type: string
+                  description: 쿠폰 생성 일시
+                usedAt:
+                  type: string
+                  description: 쿠폰 사용 일시
+                chargeAmount:
+                  type: number
+                  description: 쿠폰으로 충전된 이용권 장 수
+                isExpired:
+                  type: boolean
+                  description: "쿠폰 만료 여부: 만료(true), 만료 전(false)"
+            chargedTicketTransactionInfo:
+              type: object
+              properties:
+                generalVoiceBalance:
+                  type: number
+                  description: 회원이 현재 보유한 모의 음성 이용권 장 수
+                realVoiceBalance:
+                  type: number
+                  description: 회원이 현재 보유한 실전 음성 이용권 장 수
+                realChatBalance:
+                  type: number
+                  description: 회원이 현재 보유한 실전 채팅 이용권 장 수
+                ticketTransactionDetail:
+                  type: object
+                  properties:
+                    ticketTransactionMethod:
+                      type: string
+                      description: "이용권 충전 방법: COUPON(쿠폰), EVENT(이벤트)"
+                    interviewAssetType:
+                      type: string
+                      description: "이용권 유형: CHAT(채팅), VOICE(음성)"
+                    amount:
+                      type: number
+                      description: 충전된 이용권 장 수
+                    ticketTransactionId:
+                      type: number
+                      description: 이용권 내역 식별자
+                    interviewAssetTypeKorean:
+                      type: string
+                      description: 이용권 유형 한글
+                    ticketTransactionMethodKorean:
+                      type: string
+                      description: 이용권 충전 방법 한글
+                    generatedAt:
+                      type: string
+                      description: 이용권 내역 발생 일시
+                    description:
+                      type: string
+                      description: 이용권 상세 설명
+                    ticketTransactionType:
+                      type: string
+                      description: "이용권 내역 유형: CHARGE(충전), USE(사용)"
+                    ticketTransactionTypeKorean:
+                      type: string
+                      description: 이용권 내역 유형 한글
+                    interviewModeKorean:
+                      type: string
+                      description: 이용권 면접 모드 한글
+                    interviewMode:
+                      type: string
+                      description: "이용권 면접 모드: REAL(실전), GENERAL(모의)"
+                totalBalance:
+                  type: number
+                  description: 회원이 현재 보유한 이용권 장 수
+                generalChatBalance:
+                  type: number
+                  description: 회원이 현재 보유한 모의 채팅 이용권 장 수
+        message:
+          type: string
+          description: 응답 메시지
+    fcm-token-973757885:
+      type: object
+      properties:
+        token:
+          type: string
+          description: 유저의 FCM 토큰
+    ticket-user-count-1904764853:
+      type: object
+      properties:
+        code:
+          type: number
+          description: 응답 코드
+        data:
+          type: object
+          properties:
+            generalVoiceBalance:
+              type: number
+              description: 보유 모의 음성 이용권 수
+            realVoiceBalance:
+              type: number
+              description: 보유 실전 음성 이용권 수
+            realChatBalance:
+              type: number
+              description: 보유 실전 채팅 이용권 수
+            totalBalance:
+              type: number
+              description: 총 보유 이용권 수
+            generalChatBalance:
+              type: number
+              description: 보유 모의 채팅 이용권 수
+        message:
+          type: string
+          description: 응답 메시지
+    file-cover-letter-interviewId-download-url-1410657502:
+      type: object
+      properties:
+        code:
+          type: number
+          description: 응답 코드
+        data:
+          type: object
+          properties:
+            objectKey:
+              type: string
+              description: aws s3 object key
+            preSignedUrl:
+              type: string
+              description: aws s3 preSigned Url
+        message:
+          type: string
+          description: 응답 메시지
+    user-info-2054075560:
+      type: object
+      properties:
+        code:
+          type: number
+          description: 응답 코드
+        data:
+          type: object
+          properties:
+            birthdate:
+              type: string
+              description: 생년월일
+            gender:
+              type: string
+              description: 성별
+            leave:
+              type: boolean
+              description: 탈퇴 여부
+            socialId:
+              type: string
+              description: 소셜 ID
+            nickname:
+              type: string
+              description: 유저 닉네임
+            name:
+              type: string
+              description: 유저 이름
+            s3ProfileImageUrl:
+              type: string
+              description: 프로필 이미지 URL
+            userId:
+              type: number
+              description: 유저 ID
+            email:
+              type: string
+              description: 이메일
+            username:
+              type: string
+              description: 유저네임
+        message:
+          type: string
+          description: 응답 메시지
+    file-cover-letter-1298800292:
+      type: object
+      properties:
+        code:
+          type: number
+          description: 응답 코드
+        data:
+          type: object
+          properties:
+            fileName:
+              type: string
+              description: 파일 이름
+            s3FileUrl:
+              type: string
+              description: 파일 경로
+            type:
+              type: string
+              description: 파일 타입
+            fileId:
+              type: number
+              description: 파일 식별자
+        message:
+          type: string
+          description: 응답 메시지
+    interview1916977939:
+      type: object
+      properties:
+        code:
+          type: number
+          description: "응답 코드: 400"
+        data:
+          type: string
+          description: "에러 메시지: {누락된 필드}: {누락된 필드} is required"
+        message:
+          type: string
+          description: "응답 상태: BAD_REQUEST"
+    comment-commentId1745625053:
+      type: object
+      properties:
+        code:
+          type: number
+          description: 응답 코드
+        data:
+          type: object
+          properties:
+            count:
+              type: number
+              description: 삭제된 댓글 개수
+            message:
+              type: string
+              description: 댓글 삭제 안내문("댓글이 삭제되었습니다."
+        message:
+          type: string
+          description: 응답 메시지
+    user-authenticated2056040670:
+      type: object
+      properties:
+        code:
+          type: number
+          description: 응답 코드
+        data:
+          type: boolean
+          description: "인증 여부 (true: 인증됨, false: 인증되지 않음)"
+        message:
+          type: string
+          description: 응답 메시지
+    user-info315043345:
+      type: object
+      properties:
+        s3ProfileImageObjectKey:
+          type: string
+          description: 프로필 이미지 오브젝트 키
+        birthdate:
+          type: string
+          description: 생년월일
+        gender:
+          type: string
+          description: 성별
+        nickname:
+          type: string
+          description: 유저 닉네임
+        name:
+          type: string
+          description: 유저 이름
+    coupon-1296136601:
+      type: object
+      properties:
+        code:
+          type: number
+          description: 응답 코드
+        data:
+          type: object
+          properties:
+            couponName:
+              type: string
+              description: 쿠폰 이름
+            interviewAssetTypeKorean:
+              type: string
+              description: 쿠폰 유형 한글
+            expireAt:
+              type: string
+              description: 쿠폰 만료 일시
+            interviewModeKorean:
+              type: string
+              description: 쿠폰 면접 유형 한글
+            couponId:
+              type: number
+              description: 쿠폰 식별자
+            userId:
+              type: number
+              description: 쿠폰 발급 받은 회원 식별자
+            isUsed:
+              type: boolean
+              description: "쿠폰 사용 여부: 사용(true), 미사용(false)"
+            interviewMode:
+              type: string
+              description: "쿠폰 면접 유형: REAL(실전), GENERAL(모의)"
+            interviewAssetType:
+              type: string
+              description: 쿠폰 유형
+            generatedAt:
+              type: string
+              description: 쿠폰 생성 일시
+            chargeAmount:
+              type: number
+              description: 쿠폰으로 충전 가능한 이용권 장 수
+            isExpired:
+              type: boolean
+              description: "쿠폰 만료 여부: 만료(true), 만료 전(false)"
+        message:
+          type: string
+          description: 응답 메시지
+    fcm-token-131836546:
+      type: object
+      properties:
+        code:
+          type: number
+          description: 응답 코드
+        data:
+          type: object
+          properties:
+            message:
+              type: string
+              description: 처리 결과 메시지
+        message:
+          type: string
+          description: 응답 메시지
+    comment-post-postId-1237191268:
+      type: object
+      properties:
+        code:
+          type: number
+          description: 응답 코드
+        data:
+          type: object
+          properties:
+            comments:
+              type: array
+              items:
+                type: object
+                properties:
+                  generatedAt:
+                    type: string
+                    description: 댓글 작성 일시
+                  commentId:
+                    type: number
+                    description: 댓글 식별자
+                  comment:
+                    type: string
+                    description: 댓글 내용
+                  postId:
+                    type: number
+                    description: 게시글 식별자
+        message:
+          type: string
+          description: 응답 메시지
+    interview-902124313:
+      type: object
+      properties:
+        code:
+          type: number
+          description: 응답 코드
+        data:
+          type: object
+          properties:
+            interviews:
+              type: array
+              items:
+                type: object
+                properties:
+                  questionCount:
+                    type: number
+                    description: 면접 질문 개수
+                  interviewStatus:
+                    type: string
+                    description: 면접 상태
+                  interviewId:
+                    type: number
+                    description: 면접 식별자
+                  interviewType:
+                    type: string
+                    description: 면접 유형
+                  interviewTitle:
+                    type: string
+                    description: 면접 제목
+                  interviewMethod:
+                    type: string
+                    description: 면접 방식
+                  files:
+                    type: array
+                    description: 파일 목록
+                    items:
+                      type: object
+                      properties:
+                        fileName:
+                          type: string
+                          description: 파일 이름
+                        s3FileUrl:
+                          type: string
+                          description: 파일 경로
+                        type:
+                          type: string
+                          description: 파일 유형
+                        fileId:
+                          type: number
+                          description: 파일 식별자
+                  job:
+                    type: object
+                    properties:
+                      jobName:
+                        type: string
+                        description: 직무 이름
+                      jobId:
+                        type: number
+                        description: 직무 식별자
+                      jobNameKorean:
+                        type: string
+                        description: 직무 이름 (한글)
+                      jobDescription:
+                        type: string
+                        description: 직무 설명
+                  interviewMode:
+                    type: string
+                    description: 면접 모드
+        message:
+          type: string
+          description: 응답 메시지
+    file-profile-image-download-url1961583156:
+      type: object
+      properties:
+        code:
+          type: number
+          description: 응답 코드
+        data:
+          type: object
+          properties:
+            preSignedUrl:
+              type: string
+              description: aws s3 preSigned Url
+        message:
+          type: string
+          description: 응답 메시지
+    user-logout486549215:
+      type: object
+    file-cover-letter-fileName-upload-url803243778:
+      type: object
+      properties:
+        code:
+          type: number
+          description: 응답 코드
+        data:
+          type: object
+          properties:
+            objectKey:
+              type: string
+              description: aws s3 object key
+            preSignedUrl:
+              type: string
+              description: aws s3 PreSigned Url
+        message:
+          type: string
+          description: 응답 메시지
+    comment-700929826:
+      type: object
+      properties:
+        comment:
+          type: string
+          description: 댓글 내용
+        postId:
+          type: number
+          description: 게시글 식별자
+    question-next-question-985830319:
+      type: object
+      properties:
+        interviewId:
+          type: number
+          description: 면접 식별자
+        answer:
+          type: object
+          properties:
+            answerText:
+              type: string
+              description: 이전 질문에 대한 답변
+            s3AudioUrl:
+              type: string
+              description: 답변 오디오 s3 저장 url
+            s3VideoUrl:
+              type: string
+              description: 답변 비디오 s3 저장 url
+        answerQuestionId:
+          type: number
+          description: 전달되는 답변에 대한 질문 식별자
+        nextQuestionId:
+          type: number
+          description: 반환해줘야 하는 다음 질문 식별자
     file-cover-letter1504893150:
       type: object
       properties:
@@ -4065,90 +4791,7 @@ components:
         message:
           type: string
           description: 응답 메시지
-    post-881832127:
-      type: object
-      properties:
-        overallEvaluationId:
-          type: number
-          description: 종합 평가 식별자
-        interviewId:
-          type: number
-          description: 면접 식별자
-        jobKoreanName:
-          type: string
-          description: 직무 이름 (한글)
-        postType:
-          type: string
-          description: "게시글 유형 (EVALUATION, INTERVIEW, POST)"
-        s3ImageUrl:
-          type: string
-          description: S3 이미지 URL
-        content:
-          type: string
-          description: 게시글 내용
-    user-info-1151009706:
-      type: object
-      properties:
-        s3ProfileImageObjectKey:
-          type: string
-          description: 프로필 이미지 오브젝트 키
-        birthdate:
-          type: string
-          description: 생년월일
-        gender:
-          type: string
-          description: 성별
-        nickname:
-          type: string
-          description: 유저 닉네임
-        name:
-          type: string
-          description: 유저 이름
-        username:
-          type: string
-          description: 유저네임
-    question-completion-1208582907:
-      type: object
-      properties:
-        user_id:
-          type: number
-          description: 유저 식별자
-        questions:
-          type: array
-          items:
-            type: object
-            properties:
-              question_intent:
-                type: string
-                description: 질문 의도
-              question:
-                type: object
-                properties:
-                  question_text:
-                    type: string
-                    description: 질문 내용
-                  s3_audio_url:
-                    type: string
-                    description: 질문 url
-              key_terms:
-                type: array
-                description: 핵심 단어
-                items:
-                  oneOf:
-                  - type: object
-                  - type: boolean
-                  - type: string
-                  - type: number
-              question_excerpt:
-                type: string
-                description: 질문 출처
-              question_id:
-                type: number
-                description: 질문 식별자
-        interview_id:
-          type: number
-          description: 면접 식별자
-    coupon-user-used-1865178528:
+    post-218793856:
       type: object
       properties:
         code:
@@ -4157,140 +4800,216 @@ components:
         data:
           type: object
           properties:
-            coupons:
-              type: array
-              items:
-                type: object
-                properties:
-                  couponName:
-                    type: string
-                    description: 쿠폰 이름
-                  interviewAssetTypeKorean:
-                    type: string
-                    description: "이용권 유형 한글(채팅, 음성)"
-                  usedAt:
-                    type: string
-                    description: 사용 일시
-                  chargeAmount:
-                    type: number
-                    description: 쿠폰 사용 시 충전 가능 이용권 수량
-                  interviewModeKorean:
-                    type: string
-                    description: "면접 모드 한글(실전, 모의)"
-                  couponId:
-                    type: number
-                    description: 쿠폰 식별자
-        message:
-          type: string
-          description: 응답 메시지
-    coupon-use942495257:
-      type: object
-      properties:
-        code:
-          type: number
-          description: 응답 코드
-        data:
-          type: object
-          properties:
-            usedCouponInfo:
+            evaluation:
               type: object
               properties:
-                couponName:
-                  type: string
-                  description: 사용된 쿠폰 이름
-                interviewAssetTypeKorean:
-                  type: string
-                  description: 사용된 쿠폰 유형 한글
-                expireAt:
-                  type: string
-                  description: 쿠폰 만료 일시
-                interviewModeKorean:
-                  type: string
-                  description: 사용된 쿠폰 면접 모드 한글
-                couponId:
-                  type: number
-                  description: 사용된 쿠폰 식별자
-                userId:
-                  type: number
-                  description: 쿠폰을 사용한 회원 식별자
-                isUsed:
-                  type: boolean
-                  description: "쿠폰 사용 여부: 사용(true), 미사용(false)"
-                interviewMode:
-                  type: string
-                  description: "사용된 쿠폰 면접 모드: REAL(실전), GENERAL(모의)"
-                interviewAssetType:
-                  type: string
-                  description: "사용된 쿠폰 유형: CHAT(채팅), VOICE(음성)"
-                generatedAt:
-                  type: string
-                  description: 쿠폰 생성 일시
-                usedAt:
-                  type: string
-                  description: 쿠폰 사용 일시
-                chargeAmount:
-                  type: number
-                  description: 쿠폰으로 충전된 이용권 장 수
-                isExpired:
-                  type: boolean
-                  description: "쿠폰 만료 여부: 만료(true), 만료 전(false)"
-            chargedTicketTransactionInfo:
-              type: object
-              properties:
-                generalVoiceBalance:
-                  type: number
-                  description: 회원이 현재 보유한 모의 음성 이용권 장 수
-                realVoiceBalance:
-                  type: number
-                  description: 회원이 현재 보유한 실전 음성 이용권 장 수
-                realChatBalance:
-                  type: number
-                  description: 회원이 현재 보유한 실전 채팅 이용권 장 수
-                ticketTransactionDetail:
+                answerEvaluations:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      answerS3PresignedUrl:
+                        type: string
+                        description: 답변 텍스트 음성 url
+                      answerEvaluationId:
+                        type: number
+                        description: 답변 평가 식별자
+                      answerFeedbackImprovement:
+                        type: string
+                        description: 답변 개선 피드백
+                      answerFeedbackSuggestion:
+                        type: string
+                        description: 답변 제안 피드백
+                      answerText:
+                        type: string
+                        description: 답변 텍스트
+                      answerEvaluationScores:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            answerEvaluationType:
+                              type: string
+                              description: "답변 평가 유형(TEXT, VOICE, VIDEO"
+                            score:
+                              type: number
+                              description: 답변 평가 점수
+                            answerEvaluationScoreId:
+                              type: number
+                              description: 답변 평가 점수 식별자
+                            answerEvaluationScoreName:
+                              type: string
+                              description: 답변 평가 점수 이름
+                            rationale:
+                              type: string
+                              description: 답변 평가 점수 근거
+                      questionText:
+                        type: string
+                        description: 질문 텍스트
+                      answerFeedbackStrength:
+                        type: string
+                        description: 답변 강점 피드백
+                evaluationCriteria:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      feedbackText:
+                        type: string
+                        description: 평가 피드백 텍스트
+                      score:
+                        type: number
+                        description: 평가 점수
+                      evaluationCriteria:
+                        type: string
+                        description: 평가 기준
+                      evaluationCriteriaId:
+                        type: number
+                        description: 평가 기준 식별자
+                interview:
                   type: object
                   properties:
-                    ticketTransactionMethod:
-                      type: string
-                      description: "이용권 충전 방법: COUPON(쿠폰), EVENT(이벤트)"
-                    interviewAssetType:
-                      type: string
-                      description: "이용권 유형: CHAT(채팅), VOICE(음성)"
-                    amount:
+                    questionCount:
                       type: number
-                      description: 충전된 이용권 장 수
-                    ticketTransactionId:
+                      description: 질문 개수
+                    interviewStatus:
+                      type: string
+                      description: 면접 상태
+                    interviewId:
                       type: number
-                      description: 이용권 내역 식별자
-                    interviewAssetTypeKorean:
+                      description: 면접 식별자
+                    interviewType:
                       type: string
-                      description: 이용권 유형 한글
-                    ticketTransactionMethodKorean:
+                      description: 면접 유형
+                    interviewTitle:
                       type: string
-                      description: 이용권 충전 방법 한글
-                    generatedAt:
+                      description: 면접 제목
+                    interviewMethod:
                       type: string
-                      description: 이용권 내역 발생 일시
-                    description:
-                      type: string
-                      description: 이용권 상세 설명
-                    ticketTransactionType:
-                      type: string
-                      description: "이용권 내역 유형: CHARGE(충전), USE(사용)"
-                    ticketTransactionTypeKorean:
-                      type: string
-                      description: 이용권 내역 유형 한글
-                    interviewModeKorean:
-                      type: string
-                      description: 이용권 면접 모드 한글
+                      description: 면접 방식
+                    files:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          fileName:
+                            type: string
+                            description: 파일 이름
+                          s3FileUrl:
+                            type: string
+                            description: S3 파일 URL
+                          type:
+                            type: string
+                            description: "파일 유형 (예: COVER_LETTER)"
+                          fileId:
+                            type: number
+                            description: 파일 식별자
+                    job:
+                      type: object
+                      properties:
+                        jobName:
+                          type: string
+                          description: 직무 이름
+                        jobId:
+                          type: number
+                          description: 직무 식별자
+                        jobNameKorean:
+                          type: string
+                          description: 직무 이름 (한글)
+                        jobDescription:
+                          type: string
+                          description: 직무 설명
                     interviewMode:
                       type: string
-                      description: "이용권 면접 모드: REAL(실전), GENERAL(모의)"
-                totalBalance:
+                      description: 면접 모드
+              description: 일반 게시글 작성에서는 평가 정보 없음
+            jobName:
+              type: string
+              description: 직무 이름
+            postType:
+              type: string
+              description: "게시글 유형 (EVALUATION, INTERVIEW, POST)"
+            generatedAt:
+              type: string
+              description: 작성 일시
+            jobNameKorean:
+              type: string
+              description: 직무 이름 (한글)
+            s3ImageUrl:
+              type: string
+              description: S3 이미지 URL
+            postId:
+              type: number
+              description: 게시글 식별자
+            authorProfileUrl:
+              type: string
+              description: 작성자 프로필 이미지 URL
+            authorNickname:
+              type: string
+              description: 작성자 닉네임
+            authorId:
+              type: number
+              description: 작성자 식별자
+            interview:
+              type: object
+              properties:
+                questionCount:
                   type: number
-                  description: 회원이 현재 보유한 이용권 장 수
-                generalChatBalance:
+                  description: 질문 개수
+                interviewStatus:
+                  type: string
+                  description: 면접 상태
+                interviewId:
                   type: number
-                  description: 회원이 현재 보유한 모의 채팅 이용권 장 수
+                  description: 면접 식별자
+                interviewType:
+                  type: string
+                  description: 면접 유형
+                interviewTitle:
+                  type: string
+                  description: 면접 제목
+                interviewMethod:
+                  type: string
+                  description: 면접 방식
+                files:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      fileName:
+                        type: string
+                        description: 파일 이름
+                      s3FileUrl:
+                        type: string
+                        description: S3 파일 URL
+                      type:
+                        type: string
+                        description: "파일 유형 (예: COVER_LETTER)"
+                      fileId:
+                        type: number
+                        description: 파일 식별자
+                job:
+                  type: object
+                  properties:
+                    jobName:
+                      type: string
+                      description: 직무 이름
+                    jobId:
+                      type: number
+                      description: 직무 식별자
+                    jobNameKorean:
+                      type: string
+                      description: 직무 이름 (한글)
+                    jobDescription:
+                      type: string
+                      description: 직무 설명
+                interviewMode:
+                  type: string
+                  description: 면접 모드
+              description: 평가 공유 게시글 작성에서는 인터뷰 정보 없음
+            content:
+              type: string
+              description: 게시글 내용
         message:
           type: string
           description: 응답 메시지
@@ -4373,6 +5092,44 @@ components:
         interviewMode:
           type: string
           description: 면접 모드
+    question-completion-1381712675:
+      type: object
+      properties:
+        user_id:
+          type: number
+          description: 유저 식별자
+        questions:
+          type: array
+          items:
+            type: object
+            properties:
+              question_intent:
+                type: string
+                description: 질문 의도
+              question:
+                type: object
+                properties:
+                  question_text:
+                    type: string
+                    description: 질문 내용
+                  s3_audio_url:
+                    type: string
+                    description: 질문 url
+              key_terms:
+                type: array
+                description: 핵심 단어
+                items:
+                  oneOf:
+                  - type: object
+                  - type: boolean
+                  - type: string
+                  - type: number
+              question_excerpt:
+                type: string
+                description: 질문 출처
+        interview_id:
+          type: number
+          description: 면접 식별자
     subscription129725505:
       type: object
       properties:
@@ -4394,33 +5151,6 @@ components:
             userId:
               type: number
               description: 사용자 ID
-        message:
-          type: string
-          description: 응답 메시지
-    ticket-user-count-1904764853:
-      type: object
-      properties:
-        code:
-          type: number
-          description: 응답 코드
-        data:
-          type: object
-          properties:
-            generalVoiceBalance:
-              type: number
-              description: 보유 모의 음성 이용권 수
-            realVoiceBalance:
-              type: number
-              description: 보유 실전 음성 이용권 수
-            realChatBalance:
-              type: number
-              description: 보유 실전 채팅 이용권 수
-            totalBalance:
-              type: number
-              description: 총 보유 이용권 수
-            generalChatBalance:
-              type: number
-              description: 보유 모의 채팅 이용권 수
         message:
           type: string
           description: 응답 메시지

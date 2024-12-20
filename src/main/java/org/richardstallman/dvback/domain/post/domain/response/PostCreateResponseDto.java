@@ -10,7 +10,7 @@ public record PostCreateResponseDto(
     @NotNull long postId,
     @NotNull long authorId,
     @NotNull String authorNickname,
-    @NotNull String authorProfileUrl,
+    String authorProfileUrl,
     @NotNull String jobName,
     @NotNull String jobNameKorean,
     @NotNull String content,

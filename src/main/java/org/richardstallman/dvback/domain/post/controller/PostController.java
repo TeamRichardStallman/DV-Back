@@ -5,6 +5,8 @@ import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.richardstallman.dvback.common.DvApiResponse;
+import org.richardstallman.dvback.domain.file.domain.request.PostImageRequestDto;
+import org.richardstallman.dvback.domain.post.domain.request.PostAddImageRequestDto;
 import org.richardstallman.dvback.domain.post.domain.request.PostCreateRequestDto;
 import org.richardstallman.dvback.domain.post.domain.response.PostCreateResponseDto;
 import org.richardstallman.dvback.domain.post.domain.response.PostSliceListResponse;
@@ -30,14 +32,29 @@ public class PostController {
   public ResponseEntity<DvApiResponse<PostCreateResponseDto>> createPost(
       @Valid @RequestBody final PostCreateRequestDto postCreateRequestDto,
       @AuthenticationPrincipal final Long userId) {
+    log.info("createPost Request with postCreateRequestDto: {}", postCreateRequestDto);
     final PostCreateResponseDto postCreateResponseDto =
         postService.createPost(postCreateRequestDto, userId);
     return ResponseEntity.status(HttpStatus.CREATED).body(DvApiResponse.of(postCreateResponseDto));
   }
 
+  @PutMapping("/image")
+  public ResponseEntity<DvApiResponse<PostCreateResponseDto>> addImage(
+//      @Valid @RequestBody final PostImageRequestDto postImageRequestDto,
+      @Valid @RequestBody final PostAddImageRequestDto postAddImageRequestDto
+//      @Valid @PathVariable final String imageUrl,
+//      @Valid @PathVariable final Long postId
+  ) {
+    log.info("addImage Request with postAddImageRequestDto: {}", postAddImageRequestDto);
+    final PostCreateResponseDto postCreateResponseDto = postService.addImage(
+        postAddImageRequestDto.imageUrl(), postAddImageRequestDto.postId());
+    return ResponseEntity.status(HttpStatus.OK).body(DvApiResponse.of(postCreateResponseDto));
+  }
+
   @GetMapping("/user")
   public ResponseEntity<DvApiResponse<PostUserListResponseDto>> getPostsByUser(
       @AuthenticationPrincipal final Long userId) {
+    log.info("getPostsByUser Request with userId: {}", userId);
     final List<PostCreateResponseDto> posts = postService.getPostsByUserId(userId);
     return ResponseEntity.ok(DvApiResponse.of(new PostUserListResponseDto(posts)));
   }

@@ -1,15 +1,20 @@
 package org.richardstallman.dvback.domain.ticket.controller;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.richardstallman.dvback.common.DvApiResponse;
+import org.richardstallman.dvback.domain.ticket.domain.TicketRefundInfoDto;
 import org.richardstallman.dvback.domain.ticket.domain.TicketUserCountInfoDto;
 import org.richardstallman.dvback.domain.ticket.domain.TicketUserInfoDto;
+import org.richardstallman.dvback.domain.ticket.domain.request.TicketRefundRequestDto;
 import org.richardstallman.dvback.domain.ticket.service.TicketService;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -35,5 +40,16 @@ public class TicketController {
     final TicketUserCountInfoDto ticketUserCountInfoDto = ticketService.getUserCountInfo(userId);
 
     return ResponseEntity.ok(DvApiResponse.of(ticketUserCountInfoDto));
+  }
+
+  @PostMapping("/refund")
+  public ResponseEntity<DvApiResponse<TicketRefundInfoDto>> refundTicket(
+      @AuthenticationPrincipal Long userId,
+      @Valid @RequestBody final TicketRefundRequestDto ticketRefundRequestDto) {
+    //    final TicketRefundInfoDto ticketRefundInfoDto =
+    // ticketService.refund(ticketRefundRequestDto, userId);
+
+    //    return ResponseEntity.ok(DvApiResponse.of(ticketRefundInfoDto));
+    return null;
   }
 }
