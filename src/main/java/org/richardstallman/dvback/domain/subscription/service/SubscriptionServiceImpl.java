@@ -54,17 +54,16 @@ public class SubscriptionServiceImpl implements SubscriptionService {
   }
 
   @Override
-  public void deleteSubscription(Long subscriptionId, Long userId) {
+  public void deleteSubscription(Long jobId, Long userId) {
     SubscriptionDomain subscriptionDomain =
         subscriptionRepository
-            .findBySubscriptionIdAndUserId(subscriptionId, userId)
+            .findByJobIdAndUserId(jobId, userId)
             .orElseThrow(
                 () ->
                     new ApiException(
                         HttpStatus.NOT_FOUND,
                         String.format(
-                            "Subscription with id %d for user %d not found",
-                            subscriptionId, userId)));
+                            "Subscription with id %d for user %d not found", jobId, userId)));
 
     subscriptionRepository.deleteById(subscriptionDomain.getSubscriptionId());
   }
