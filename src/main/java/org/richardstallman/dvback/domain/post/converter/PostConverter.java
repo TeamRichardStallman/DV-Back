@@ -88,7 +88,8 @@ public class PostConverter {
       PostDomain postDomain,
       InterviewResponseDto interviewResponseDto,
       OverallEvaluationResponseDto overallEvaluationResponseDto,
-      String s3ProfileUrl) {
+      String s3ProfileUrl,
+      String s3PostImageUrl) {
     return new PostCreateResponseDto(
         postDomain.getPostId(),
         postDomain.getAuthorDomain().getUserId(),
@@ -97,10 +98,24 @@ public class PostConverter {
         postDomain.getJobDomain().getJobName(),
         postDomain.getJobDomain().getJobNameKorean(),
         postDomain.getContent(),
-        postDomain.getS3ImageUrl(),
+        postDomain.getS3ImageUrl() == null ? null : s3PostImageUrl,
         interviewResponseDto,
         overallEvaluationResponseDto,
         postDomain.getPostType(),
         postDomain.getGeneratedAt());
+  }
+
+  public PostDomain addImage(PostDomain postDomain, String imageUrl) {
+    return PostDomain.builder()
+        .postId(postDomain.getPostId())
+        .authorDomain(postDomain.getAuthorDomain())
+        .jobDomain(postDomain.getJobDomain())
+        .content(postDomain.getContent())
+        .s3ImageUrl(imageUrl)
+        .interviewDomain(postDomain.getInterviewDomain())
+        .overallEvaluationDomain(postDomain.getOverallEvaluationDomain())
+        .postType(postDomain.getPostType())
+        .generatedAt(postDomain.getGeneratedAt())
+        .build();
   }
 }

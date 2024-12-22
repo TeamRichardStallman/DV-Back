@@ -13,6 +13,8 @@ public interface PostService {
 
   PostCreateResponseDto createPost(PostCreateRequestDto postCreateRequestDto, Long userId);
 
+  PostCreateResponseDto addImage(String imageUrl, Long postId);
+
   List<PostCreateResponseDto> getPostsByUserId(Long userId);
 
   PostDomain getPost(Long postId);

@@ -41,7 +41,8 @@ public class AnswerEvaluationScoreEntity extends BaseEntity {
 
   @NotNull(message = "Score is required") private int score;
 
-  @NotNull(message = "Rationale is required") private String rationale;
+  @NotNull(message = "Rationale is required") @Column(columnDefinition = "TEXT")
+  private String rationale;
 
   @ManyToOne(fetch = FetchType.EAGER)
   @JoinColumn(name = "answer_evaluation_id")

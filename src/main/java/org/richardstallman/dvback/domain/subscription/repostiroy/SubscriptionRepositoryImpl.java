@@ -29,10 +29,9 @@ public class SubscriptionRepositoryImpl implements SubscriptionRepository {
   }
 
   @Override
-  public Optional<SubscriptionDomain> findBySubscriptionIdAndUserId(
-      Long subscriptionId, Long userId) {
+  public Optional<SubscriptionDomain> findByJobIdAndUserId(Long jobId, Long userId) {
     return subscriptionJpaRepository
-        .findBySubscriptionIdAndUserUserId(subscriptionId, userId)
+        .findByJobJobIdAndUserUserId(jobId, userId)
         .map(subscriptionConverter::fromEntityToDomain);
   }
 

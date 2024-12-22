@@ -35,6 +35,7 @@ import org.richardstallman.dvback.domain.evaluation.domain.response.EvaluationCr
 import org.richardstallman.dvback.domain.file.domain.response.FileResponseDto;
 import org.richardstallman.dvback.domain.interview.domain.response.InterviewResponseDto;
 import org.richardstallman.dvback.domain.job.domain.JobDomain;
+import org.richardstallman.dvback.domain.post.domain.request.PostAddImageRequestDto;
 import org.richardstallman.dvback.domain.post.domain.request.PostCreateRequestDto;
 import org.richardstallman.dvback.domain.post.domain.response.PostCreateResponseDto;
 import org.richardstallman.dvback.domain.post.domain.response.PostUserListResponseDto;
@@ -154,6 +155,109 @@ public class PostControllerTest {
                         fieldWithPath("postType")
                             .type(JsonFieldType.STRING)
                             .description("게시글 유형 (EVALUATION, INTERVIEW, POST)"))
+                    .responseFields(
+                        fieldWithPath("code").type(JsonFieldType.NUMBER).description("응답 코드"),
+                        fieldWithPath("message").type(JsonFieldType.STRING).description("응답 메시지"),
+                        fieldWithPath("data.postId")
+                            .type(JsonFieldType.NUMBER)
+                            .description("게시글 식별자"),
+                        fieldWithPath("data.authorId")
+                            .type(JsonFieldType.NUMBER)
+                            .description("작성자 식별자"),
+                        fieldWithPath("data.authorNickname")
+                            .type(JsonFieldType.STRING)
+                            .description("작성자 닉네임"),
+                        fieldWithPath("data.authorProfileUrl")
+                            .type(JsonFieldType.STRING)
+                            .description("작성자 프로필 이미지 URL"),
+                        fieldWithPath("data.jobName")
+                            .type(JsonFieldType.STRING)
+                            .description("직무 이름"),
+                        fieldWithPath("data.jobNameKorean")
+                            .type(JsonFieldType.STRING)
+                            .description("직무 이름 (한글)"),
+                        fieldWithPath("data.content")
+                            .type(JsonFieldType.STRING)
+                            .description("게시글 내용"),
+                        fieldWithPath("data.s3ImageUrl")
+                            .type(JsonFieldType.STRING)
+                            .description("S3 이미지 URL"),
+                        fieldWithPath("data.postType")
+                            .type(JsonFieldType.STRING)
+                            .description("게시글 유형 (EVALUATION, INTERVIEW, POST)"),
+                        fieldWithPath("data.generatedAt")
+                            .type(JsonFieldType.STRING)
+                            .description("작성 일시"),
+                        fieldWithPath("data.interview")
+                            .type(JsonFieldType.NULL)
+                            .description("일반 게시글 작성에서는 면접 정보 없음"),
+                        fieldWithPath("data.evaluation")
+                            .type(JsonFieldType.NULL)
+                            .description("일반 게시글 작성에서는 평가 정보 없음"))
+                    .build())));
+  }
+
+  @Test
+  @WithMockUser
+  @DisplayName("게시글 작성 이미지 추가 테스트 - 성공")
+  void add_image() throws Exception {
+    // given
+    Long userId = 1L;
+    PostAddImageRequestDto postAddImageRequestDto = new PostAddImageRequestDto("imageUrl", 1L);
+    PostCreateResponseDto responseDto =
+        new PostCreateResponseDto(
+            100L,
+            12L,
+            "nickname",
+            "authorProfileUrl",
+            "BACK_END",
+            "백엔드",
+            "This is a test post content.",
+            "https://s3.amazonaws.com/test-image.jpg",
+            null,
+            null,
+            CommonConstants.PostType.POST,
+            LocalDateTime.now());
+    String accessToken = jwtUtil.generateAccessToken(userId);
+    MockCookie authCookie = new MockCookie("access_token", accessToken);
+
+    when(postService.addImage(eq("imageUrl"), eq(1L))).thenReturn(responseDto);
+
+    String content = objectMapper.writeValueAsString(postAddImageRequestDto);
+    ResultActions resultActions =
+        mockMvc.perform(
+            RestDocumentationRequestBuilders.put("/post/image")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(content)
+                .cookie(authCookie));
+
+    // then
+    resultActions
+        .andExpect(status().isOk())
+        .andExpect(jsonPath("code").value(200))
+        .andExpect(jsonPath("message").value("SUCCESS"))
+        .andExpect(jsonPath("data.postId").value(100L))
+        .andExpect(jsonPath("data.jobName").value("BACK_END"))
+        .andExpect(jsonPath("data.jobNameKorean").value("백엔드"))
+        .andExpect(jsonPath("data.content").value("This is a test post content."))
+        .andExpect(jsonPath("data.s3ImageUrl").value("https://s3.amazonaws.com/test-image.jpg"))
+        .andExpect(jsonPath("data.postType").value("POST"));
+
+    // restdocs
+    resultActions.andDo(
+        document(
+            "게시글 작성 이미지 추가 - 성공",
+            preprocessRequest(prettyPrint()),
+            preprocessResponse(prettyPrint()),
+            resource(
+                ResourceSnippetParameters.builder()
+                    .tag("Post API")
+                    .summary("게시글 작성 이미지 추가")
+                    .requestFields(
+                        fieldWithPath("imageUrl")
+                            .type(JsonFieldType.STRING)
+                            .description("S3 이미지 URL"),
+                        fieldWithPath("postId").type(JsonFieldType.NUMBER).description("게시글 식별자"))
                     .responseFields(
                         fieldWithPath("code").type(JsonFieldType.NUMBER).description("응답 코드"),
                         fieldWithPath("message").type(JsonFieldType.STRING).description("응답 메시지"),

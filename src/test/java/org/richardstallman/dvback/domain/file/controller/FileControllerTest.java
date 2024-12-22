@@ -128,6 +128,61 @@ public class FileControllerTest {
   }
 
   @Test
+  @DisplayName("게시글 이미지 업로드 presigned url 생성 - 성공")
+  @WithMockUser
+  void get_post_image_upload_presigned_url() throws Exception {
+    // Given
+    Long userId = 1L;
+    Long postId = 2L;
+    String fileName = "testFile.txt";
+    String expectedUrl = "https://s3.aws.com/testFile.txt";
+    PreSignedUrlResponseDto preSignedUrlResponseDto =
+        new PreSignedUrlResponseDto(expectedUrl, fileName);
+
+    String accessToken = jwtUtil.generateAccessToken(1L);
+    MockCookie authCookie = new MockCookie("access_token", accessToken);
+
+    // Mock S3Service behavior
+    when(s3Service.createPreSignedUrlForPostImage(eq(fileName), eq(postId)))
+        .thenReturn(preSignedUrlResponseDto);
+
+    // When & Then
+    ResultActions resultActions =
+        mockMvc.perform(
+            get("/file/post-image/{fileName}/{postId}/upload-url", fileName, postId)
+                .cookie(authCookie)
+                .accept(MediaType.APPLICATION_JSON));
+
+    // Validate the response
+    resultActions
+        .andExpect(status().isOk())
+        .andExpect(content().contentType(MediaType.APPLICATION_JSON));
+
+    // REST Docs
+    resultActions.andDo(
+        document(
+            "게시글 이미지 업로드 presigned url 생성",
+            preprocessResponse(prettyPrint()),
+            resource(
+                ResourceSnippetParameters.builder()
+                    .tag("File API")
+                    .summary("게시글 이미지 업로드 presigned url 생성")
+                    .pathParameters(
+                        parameterWithName("postId").description("게시글 ID"),
+                        parameterWithName("fileName").description("업로드할 파일명"))
+                    .responseFields(
+                        fieldWithPath("code").type(JsonFieldType.NUMBER).description("응답 코드"),
+                        fieldWithPath("message").type(JsonFieldType.STRING).description("응답 메시지"),
+                        fieldWithPath("data.preSignedUrl")
+                            .type(JsonFieldType.STRING)
+                            .description("aws s3 preSigned Url"),
+                        fieldWithPath("data.objectKey")
+                            .type(JsonFieldType.STRING)
+                            .description("aws s3 object key"))
+                    .build())));
+  }
+
+  @Test
   @DisplayName("면접 정보 입력 시 PreSigned URL 생성")
   @WithMockUser
   void testGetCoverLetterUploadUrlWhenInputInterviewInfo() throws Exception {

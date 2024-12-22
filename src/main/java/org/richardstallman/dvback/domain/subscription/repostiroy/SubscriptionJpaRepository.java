@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 public interface SubscriptionJpaRepository extends JpaRepository<SubscriptionEntity, Long> {
   List<SubscriptionEntity> findByUserUserIdOrderBySubscriptionIdDesc(Long userId);
 
-  Optional<SubscriptionEntity> findBySubscriptionIdAndUserUserId(Long subscriptionId, Long userId);
+  Optional<SubscriptionEntity> findByJobJobIdAndUserUserId(Long jobId, Long userId);
 
   boolean existsByUserUserIdAndJobJobId(Long userId, Long jobId);
 }

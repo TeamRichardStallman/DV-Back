@@ -56,6 +56,19 @@ public class S3ServiceImpl implements S3Service {
   }
 
   @Override
+  public PreSignedUrlResponseDto createPreSignedUrlForPostImage(String fileName, Long postId) {
+    String filePathKey = makeS3FilePathForImage(FileType.POST_IMAGE, fileName, postId);
+
+    PutObjectRequest getObjectRequest =
+        PutObjectRequest.builder().bucket(bucketName).key(filePathKey).build();
+
+    PresignedPutObjectRequest presignedPutObjectRequest =
+        s3Presigner.presignPutObject(
+            builder -> builder.signatureDuration(urlDuration).putObjectRequest(getObjectRequest));
+    return new PreSignedUrlResponseDto(presignedPutObjectRequest.url().toString(), filePathKey);
+  }
+
+  @Override
   public PreSignedUrlResponseDto createPreSignedURLForInterview(
       FileType fileType,
       String fileName,

@@ -9,7 +9,7 @@ public interface SubscriptionRepository {
 
   List<SubscriptionDomain> findByUserId(Long userId);
 
-  Optional<SubscriptionDomain> findBySubscriptionIdAndUserId(Long subscriptionId, Long userId);
+  Optional<SubscriptionDomain> findByJobIdAndUserId(Long jobId, Long userId);
 
   void deleteById(Long subscriptionId);
 

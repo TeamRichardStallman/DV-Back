@@ -182,17 +182,16 @@ public class SubscriptionControllerTest {
   void delete_subscription() throws Exception {
     // given
     Long userId = 1L;
-    Long subscriptionId = 1L;
+    Long jobId = 1L;
     String accessToken = jwtUtil.generateAccessToken(userId);
     MockCookie authCookie = new MockCookie("access_token", accessToken);
 
-    doNothing().when(subscriptionService).deleteSubscription(subscriptionId, userId);
+    doNothing().when(subscriptionService).deleteSubscription(jobId, userId);
 
     // when
     ResultActions resultActions =
         mockMvc.perform(
-            RestDocumentationRequestBuilders.delete(
-                    "/subscription/{subscriptionId}", subscriptionId)
+            RestDocumentationRequestBuilders.delete("/subscription/{jobId}", jobId)
                 .cookie(authCookie)
                 .contentType(MediaType.APPLICATION_JSON));
 
@@ -210,7 +209,7 @@ public class SubscriptionControllerTest {
                     .tag("Subscription API")
                     .summary("구독 삭제 API")
                     .description("사용자가 특정 구독을 삭제합니다.")
-                    .pathParameters(parameterWithName("subscriptionId").description("삭제할 구독 ID"))
+                    .pathParameters(parameterWithName("jobId").description("삭제할 구독 ID"))
                     .build())));
   }
 }
