@@ -6,7 +6,7 @@ spring:
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
@@ -57,7 +57,7 @@ python:
 cloud:
   aws:
     s3:
-      bucket: ktb-8-dev-bucket
+      bucket: ktb-8-bucket
       urlDurationMinutes: 10
       baseFilePath: files/
     credentials:
